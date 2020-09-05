@@ -45,6 +45,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* color */
+$color-1: #fcfcfc;
+$color-2: #315375;
+$color-3: #5a7c9d;
+$color-4: #83a6c6;
+$color-5: #add0ef;
+
 .white {
   color: #fff;
 }
@@ -74,6 +80,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* main */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
 }
 
@@ -82,6 +93,9 @@ body {
 }
 
 /* class */
+.navbar {
+    // background-color: $color-1;
+}
 
 /* media query */
 /* large screen */
