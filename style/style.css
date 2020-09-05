@@ -82,6 +82,11 @@ a {
 
 /* id */
 /* class */
+.page-footer {
+  background-color: #1b1b1b;
+  color: #fcfcfc;
+}
+
 /* media query */
 /* large screen */
 /* small screen */
