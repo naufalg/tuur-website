@@ -1,0 +1,103 @@
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #8a8a8a;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #5c5c5c;
+}
+
+/* fonts */
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+/* color */
+.white {
+  color: #fff;
+}
+
+.black {
+  color: black;
+}
+
+.color-1 {
+  color: #fcfcfc;
+}
+
+.color-2 {
+  color: #315375;
+}
+
+.color-3 {
+  color: #5a7c9d;
+}
+
+.color-4 {
+  color: #83a6c6;
+}
+
+.color-5 {
+  color: #add0ef;
+}
+
+/* main */
+body {
+}
+
+/* id */
+#nav {
+}
+
+/* class */
+
+/* media query */
+/* large screen */
+@media (max-width: 1200px) {
+}
+
+/* small screen */
+@media (max-width: 992px) {
+}
+
+/* tablet */
+@media (max-width: 768px) {
+}
+
+/* phone */
+@media (max-width: 576px) {
+}
+/*# sourceMappingURL=style.css.map */
