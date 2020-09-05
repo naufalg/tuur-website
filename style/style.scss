@@ -1,8 +1,17 @@
+// variable
+/* color */
+$color-1: #fcfcfc;
+$color-2: #315375;
+$color-3: #5a7c9d;
+$color-4: #83a6c6;
+$color-5: #add0ef;
+
 /* global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 2.65vh;
 }
 
 /* scrollbar */
@@ -44,13 +53,6 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Nunito", sans-serif;
 }
 
-/* color */
-$color-1: #fcfcfc;
-$color-2: #315375;
-$color-3: #5a7c9d;
-$color-4: #83a6c6;
-$color-5: #add0ef;
-
 .white {
   color: #fff;
 }
@@ -81,8 +83,13 @@ $color-5: #add0ef;
 
 /* main */
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  // text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -95,13 +102,23 @@ body {
 /* class */
 // navbar
 .navbar {
-    // background-color: $color-1;
+  // background-color: $color-1;
+}
+// carousel
+.carousel {
+  margin: 10vh 0 0 0;
+}
+
+// headline
+.marketing > div {
+  margin: 5vh 0 0 0;
+  // padding: 5vh;
 }
 
 // footer
 .page-footer {
-    background-color: #1b1b1b;
-    color: $color-1;
+  background-color: #1b1b1b;
+  color: $color-1;
 }
 
 /* media query */
@@ -111,10 +128,32 @@ body {
 
 /* small screen */
 @media (max-width: 992px) {
+  .carousel-caption {
+    font-size: 0.2em;
+  }
 }
 
 /* tablet */
 @media (max-width: 768px) {
+
+  body {
+    font-size: 0.8em;
+  }
+
+  .carousel {
+    margin: 10vh 0 0 0;
+  }
+  .carousel-caption {
+    display: none;
+  }
+
+  .caption1 {
+    font-size: 0.5em;
+  }
+
+  .col-lg-4 {
+    margin: 5vh 0 0 0;
+  }
 }
 
 /* phone */

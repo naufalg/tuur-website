@@ -1,9 +1,11 @@
+/* color */
 /* global */
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 2.65vh;
 }
 
 /* scrollbar */
@@ -45,7 +47,6 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Nunito", sans-serif;
 }
 
-/* color */
 .white {
   color: #fff;
 }
@@ -80,8 +81,20 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: inherit;
+}
+
 /* id */
 /* class */
+.carousel {
+  margin: 10vh 0 0 0;
+}
+
+.marketing > div {
+  margin: 5vh 0 0 0;
+}
+
 .page-footer {
   background-color: #1b1b1b;
   color: #fcfcfc;
@@ -90,6 +103,30 @@ a {
 /* media query */
 /* large screen */
 /* small screen */
+@media (max-width: 992px) {
+  .carousel-caption {
+    font-size: 0.2em;
+  }
+}
+
 /* tablet */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.8em;
+  }
+  .carousel {
+    margin: 10vh 0 0 0;
+  }
+  .carousel-caption {
+    display: none;
+  }
+  .caption1 {
+    font-size: 0.5em;
+  }
+  .col-lg-4 {
+    margin: 5vh 0 0 0;
+  }
+}
+
 /* phone */
 /*# sourceMappingURL=style.css.map */
