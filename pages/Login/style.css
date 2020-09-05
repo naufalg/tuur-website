@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* scrollbar */
@@ -41,10 +41,6 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Roboto", sans-serif;
 }
 
-.nunito {
-  font-family: "Nunito", sans-serif;
-}
-
 /* color */
 .white {
   color: #fff;
@@ -76,28 +72,14 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* main */
 body {
+  background-color: #add0ef;
 }
 
 /* id */
-#nav {
-}
-
 /* class */
-
 /* media query */
 /* large screen */
-@media (max-width: 1200px) {
-}
-
 /* small screen */
-@media (max-width: 992px) {
-}
-
 /* tablet */
-@media (max-width: 768px) {
-}
-
 /* phone */
-@media (max-width: 576px) {
-}
 /*# sourceMappingURL=style.css.map */
