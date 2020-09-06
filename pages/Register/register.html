@@ -24,7 +24,10 @@
       crossorigin="anonymous"
     />
     <!-- custom css -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- custom css from Index.html for navbar and footer-->
+    <link rel="stylesheet" href="/style/style.css" />
     <!-- fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
@@ -43,22 +46,204 @@
       rel="stylesheet"
     />
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="./assets/images/tuur-icon.png" />
+    <link rel="icon" type="image/png" href="/assets/images/tuur-icon.png" />
   </head>
 
   <!-- body -->
   <body>
     <!-- navbar -->
     <header>
-      <nav></nav>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html">
+          <img src="/assets/images/tuur.png" width="150" height="30" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/Product/product.html"
+                >Destination</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/Product/product.html"
+                >My order</a
+              >
+            </li>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <a href="/pages/Login/login.html"><button class="btn btn-outline-warning" type="button">Login
+              </button></a>
+              <a href="/pages/Register/register.html">
+              <button class="btn btn btn-warning" type="button">Signup</button></a>
+            </div>
+          </ul>
+        </div>
+      </nav>
     </header>
     <!-- main -->
     <main>
       <!-- isi contentnya disini -->
-      <section></section>
+      <section>
+        <!-- ======================= Register ======================= -->
+        <div  class="container">
+          <div class="row">
+            <!--====== bagian form ======-->
+            <div class="col">
+                <form>
+                  <!-- logo -->
+                  <a href="/index.html">
+                  <img class="center" src="/assets/images/tuur.png" />
+                </a>
+                  <h2 class="signin">Create new account</h2>
+                  <!-- full name -->
+                  <input
+                    type="fullname"
+                    id="fullname"
+                    class="form-control mb-4"
+                    placeholder="Full Name"
+                  />
+                  <!-- Email address -->
+                  <input
+                    type="fullname"
+                    id="fullname"
+                    class="form-control mb-4"
+                    placeholder="Email Address"
+                  />
+                  <!-- password -->
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-control mb-4"
+                    placeholder="Password"
+                  />
+                  <!-- bagian terms and condition-->
+                  <div class="d-flex justify-content-around">
+                    <div>
+                      <!-- terms and condition-->
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="remember"
+                        />
+                        <label class="custom-control-label" for="remember"
+                          >I have read the term and conditions </label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- button -->
+                  <button class="btn btn-info btn-block my-4" type="submit">
+                    Sign Up
+                  </button>
+                  <!-- dont have account -->
+                  <p>Have an account?<a href="/pages/Login/login.html">Sign In</a></p>
+                </form>
+              </div>
+              <!--====== end bagian form ======-->
+              <!--======bagian gambar======-->
+            <div class="col bagian-gambar">
+              <div class="bagian-tulisan">
+                <h1>Please Sign Up First</h1>
+              </div>
+            </div>
+            <!--======end bagian gambar=====-->
+            </div>
+          </div>
+        </div>
+        <!-- ======================= end Register ======================= -->
+      </section>
     </main>
-    <!-- footer -->
-    <footer></footer>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div style="background-color: #1b1b1b;" class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Content -->
+            <h5 class="text-uppercase">Footer Content</h5>
+            <p>
+              Here you can use rows and columns to organize your footer content.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none pb-3" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="/index.html">Home</a>
+              </li>
+              <li>
+                <a href="/pages/Product/product.html">Destination</a>
+              </li>
+              <li>
+                <a href="#!">My Profile</a>
+              </li>
+              <li>
+                <a href="/pages/Register/register.html">Signup</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Social</h5>
+
+            <ul class="list-unstyled">
+              <li class="list-inline-item">
+                <a href=""> <i class="fab fa-2x fa-facebook-f"> </i> </a>
+              </li>
+              <li class="list-inline-item">
+                <a href=""> <i class="fab fa-2x fa-twitter"> </i> </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="">
+                  <i class="fab fa-2x fa-instagram"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href=""> <i class="fas fa-2x fa-envelope"> </i> </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        Copyright: Tuur © 2020
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
     <!-- bootstrap script -->
     <script
