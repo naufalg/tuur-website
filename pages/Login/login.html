@@ -55,37 +55,72 @@
     <!-- main -->
     <main>
       <!-- isi contentnya disini -->
-      <!-- mulai login -->
       <section>
+        <!-- ======================= login ======================= -->
         <div class="container">
-          <!-- kartu login -->
-          <div class="card">
-            <!-- bagian gambar -->
-            <div class="img-tuur">
-              <img src="" />
-              <h1>Please Sign In</h1>
-            </div>
-            <!-- bagian form -->
-            <div class="form-tuur">
-              <form>
-                <!-- logo -->
+          <div class="row">
+            <!--======bagian gambar======-->
+            <div class="col">
+              <div>
                 <img src="" />
-                <!-- sign in -->
-                <h2>Sign in</h2>
-                <!-- email -->
-                <input />
-                <!-- password -->
-                <input />
-                <!-- button -->
-                <input />
-                <!-- dont have account -->
-                <p>Don't have an account?<a href="#">Sign Up</a></p>
-              </form>
+                <h1>Please Sign In</h1>
+              </div>
+            </div>
+            <!--======end bagian gambar=====-->
+            <!--====== bagian form ======-->
+            <div class="col">
+                <form>
+                  <!-- logo -->
+                  <img class="center" src="/assets/images/tuur.png" />
+                  <h2>Sign in</h2>
+                  <!-- email -->
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control mb-4"
+                    placeholder="Email Address"
+                  />
+                  <!-- password -->
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-control mb-4"
+                    placeholder="Password"
+                  />
+                  <!-- bagian remember dan forgot passoword-->
+                  <div class="d-flex justify-content-around">
+                    <div>
+                      <!-- Remember me -->
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="cek"
+                          class="custom-control-input"
+                          id="remember"
+                        />
+                        <label class="custom-control-label" for="remember"
+                          >Remember me</label
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <!-- Forgot password -->
+                      <a href="">Forgot password?</a>
+                    </div>
+                  </div>
+                  <!-- button -->
+                  <button class="btn btn-info btn-block my-4" type="submit">
+                    Sign in
+                  </button>
+                  <!-- dont have account -->
+                  <p>Don't have an account?<a href="#">Sign Up</a></p>
+                </form>
+              </div>
+              <!--====== end bagian form ======-->
             </div>
           </div>
         </div>
+        <!-- ======================= end login ======================= -->
       </section>
-      <!-- end mulai login -->
     </main>
     <!-- footer -->
     <footer></footer>

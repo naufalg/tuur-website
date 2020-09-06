@@ -79,6 +79,12 @@ body {
 }
 
 /* class */
+.container {
+  padding: 150px;
+}
+.row {
+  background-color: #fcfcfc;
+}
 
 /* media query */
 /* large screen */
@@ -95,4 +101,12 @@ body {
 
 /* phone */
 @media (max-width: 576px) {
+  .container {
+    padding: 50px;
+  }
+  img.center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }
