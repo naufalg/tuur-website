@@ -47,7 +47,7 @@ let displayData = async () => {
 <div class="card-body">
   <h5 class="card-title">${element.attraction}</h5>
   <p class="card-text">
-  $ ${element.price}/night
+  $ ${element.price}
   </p>
   <button
   type="button"
