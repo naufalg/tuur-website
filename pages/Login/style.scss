@@ -72,6 +72,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* main */
 body {
   background-color: #add0ef;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* id */
@@ -84,6 +85,25 @@ body {
 }
 .row {
   background-color: #fcfcfc;
+}
+
+.bagian-gambar {
+  position: relative;
+  background-color: #83a6c6;
+  background-image: url(/assets/images/borobudur.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+}
+
+.bagian-tulisan {
+  color: #fcfcfc;
+  text-shadow: 2px 4px 10px #83a6c6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* media query */
@@ -108,5 +128,13 @@ body {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+  }
+  .bagian-tulisan {
+    color: #fcfcfc;
+    text-shadow: 2px 4px 10px #83a6c6;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%, -0%);
   }
 }
