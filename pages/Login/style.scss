@@ -71,8 +71,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* main */
 body {
-  background-color: #add0ef;
-  font-family: "Montserrat", sans-serif;
+  background-color: #315375;
+  font-family: "Roboto", sans-serif;
 }
 
 /* id */
@@ -84,7 +84,7 @@ body {
   padding: 150px;
 }
 .row {
-  background-color: #fcfcfc;
+  background-color: #fff;
 }
 
 .bagian-gambar {
@@ -104,6 +104,24 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.signin {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.center {
+  height: 40px;
+  width: 160px;
+  display: block;
+  margin: auto;
+}
+
+.test {
+  background-color: #315375;
 }
 
 /* media query */

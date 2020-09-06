@@ -23,8 +23,11 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <!-- custom css -->
+    <!-- custom css login -->
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- custom css from Index.html for navbar and footer-->
+    <link rel="stylesheet" href="/style/style.css">
     <!-- fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
@@ -50,14 +53,50 @@
   <body>
     <!-- navbar -->
     <header>
-      <nav></nav>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="/assets/images/tuur.png" width="150" height="30" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Destination</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My order</a>
+            </li>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button class="btn btn-outline-warning" type="button">
+                Login
+              </button>
+              <button class="btn btn btn-warning" type="button">Signup</button>
+            </div>
+          </ul>
+        </div>
+      </nav>
     </header>
     <!-- main -->
     <main>
       <!-- isi contentnya disini -->
       <section>
         <!-- ======================= login ======================= -->
-        <div class="container">
+        <div  class="container">
           <div class="row">
             <!--======bagian gambar======-->
             <div class="col bagian-gambar">
@@ -73,7 +112,7 @@
                   <a href="/index.html">
                   <img class="center" src="/assets/images/tuur.png" />
                 </a>
-                  <h2>Sign in</h2>
+                  <h2 class="signin">Sign in</h2>
                   <!-- email -->
                   <input
                     type="email"
@@ -123,9 +162,81 @@
         <!-- ======================= end login ======================= -->
       </section>
     </main>
-    <!-- footer -->
-    <footer></footer>
+     <!-- Footer -->
+     <footer class="page-footer font-small blue pt-4">
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div style="background-color: #1b1b1b;" class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Content -->
+            <h5 class="text-uppercase">Footer Content</h5>
+            <p>
+              Here you can use rows and columns to organize your footer content.
+            </p>
+          </div>
+          <!-- Grid column -->
 
+          <hr class="clearfix w-100 d-md-none pb-3" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Home</a>
+              </li>
+              <li>
+                <a href="#!">Destination</a>
+              </li>
+              <li>
+                <a href="#!">My Profile</a>
+              </li>
+              <li>
+                <a href="#!">Signup</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Social</h5>
+
+            <ul class="list-unstyled">
+              <li class="list-inline-item">
+                <a href=""> <i class="fab fa-2x fa-facebook-f"> </i> </a>
+              </li>
+              <li class="list-inline-item">
+                <a href=""> <i class="fab fa-2x fa-twitter"> </i> </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="">
+                  <i class="fab fa-2x fa-instagram"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href=""> <i class="fas fa-2x fa-envelope"> </i> </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        Copyright: Tuur © 2020
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
     <!-- bootstrap script -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
