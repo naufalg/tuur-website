@@ -72,14 +72,80 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* main */
 body {
-  background-color: #add0ef;
+  background-color: #315375;
+  font-family: "Roboto", sans-serif;
 }
 
 /* id */
 /* class */
+.container {
+  padding: 150px;
+}
+
+.row {
+  background-color: #fff;
+}
+
+.bagian-gambar {
+  position: relative;
+  background-color: #83a6c6;
+  background-image: url(/assets/images/borobudur.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+}
+
+.bagian-tulisan {
+  color: #fcfcfc;
+  text-shadow: 2px 4px 10px #83a6c6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.signin {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.center {
+  height: 40px;
+  width: 160px;
+  display: block;
+  margin: auto;
+}
+
+.test {
+  background-color: #315375;
+}
+
 /* media query */
 /* large screen */
 /* small screen */
 /* tablet */
 /* phone */
+@media (max-width: 576px) {
+  .container {
+    padding: 50px;
+  }
+  img.center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .bagian-tulisan {
+    color: #fcfcfc;
+    text-shadow: 2px 4px 10px #83a6c6;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
 /*# sourceMappingURL=style.css.map */
