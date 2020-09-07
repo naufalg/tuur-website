@@ -112,24 +112,24 @@
                   <h2 class="signin">Create new account</h2>
                   <!-- full name -->
                   <input
-                    type="fullname"
-                    id="fullname"
+                  type="text" name="nama" id="nama" placeholder="nama"
                     class="form-control mb-4"
-                    placeholder="Full Name"
+                    
                   />
-                  <!-- Email address -->
+                  <!-- username -->
                   <input
-                    type="fullname"
-                    id="fullname"
+                  type="text" name="username" id="username" placeholder="username"
                     class="form-control mb-4"
-                    placeholder="Email Address"
+                    
                   />
                   <!-- password -->
                   <input
-                    type="password"
-                    id="password"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="password"
                     class="form-control mb-4"
-                    placeholder="Password"
+                    
                   />
                   <!-- bagian terms and condition-->
                   <div class="d-flex justify-content-around">
@@ -148,7 +148,7 @@
                     </div>
                   </div>
                   <!-- button -->
-                  <button class="btn btn-info btn-block my-4" type="submit">
+                  <button class="btn btn-info btn-block my-4" id="register-btn" onclick="register()">
                     Sign Up
                   </button>
                   <!-- dont have account -->
@@ -244,7 +244,9 @@
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
-
+    
+    
+    
     <!-- bootstrap script -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -261,5 +263,7 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom script -->
+    <script src="./register.js"></script>
   </body>
 </html>
