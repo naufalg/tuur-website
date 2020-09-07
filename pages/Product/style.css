@@ -182,7 +182,7 @@ section {
 /* tablet */
 @media (max-width: 768px) {
   section {
-    margin-top: 13vh;
+    margin-top: 8vh;
   }
 }
 
