@@ -180,5 +180,11 @@ section {
 /* large screen */
 /* small screen */
 /* tablet */
+@media (max-width: 768px) {
+  section {
+    margin-top: 0vh;
+  }
+}
+
 /* phone */
 /*# sourceMappingURL=style.css.map */
