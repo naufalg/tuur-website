@@ -71,6 +71,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* main */
 body {
+  background-color: #5a7c9d;
+  font-family: "Roboto", sans-serif;
 }
 
 /* id */
@@ -78,8 +80,56 @@ body {
 }
 
 /* class */
+.container {
+  padding: 150px;
+}
+.row {
+  background-color: #fff;
+}
 
+.bagian-gambar {
+  position: relative;
+  background-color: #83a6c6;
+  background-image: url(/assets/images/europe.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+}
 
+.bagian-tulisan {
+  color: black;
+  text-shadow: 2px 4px 10px #83a6c6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: table;
+  margin: 0px auto 0px auto;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+.signin {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.center {
+  height: 40px;
+  width: 160px;
+  display: block;
+  margin: auto;
+}
+
+.test {
+  background-color: #315375;
+}
 /* media query */
 /* large screen */
 @media (max-width: 1200px) {
@@ -95,4 +145,21 @@ body {
 
 /* phone */
 @media (max-width: 576px) {
+  .container {
+    margin-top: 80px;
+    padding: 60px;
+  }
+  img.center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .bagian-tulisan {
+    color: #fcfcfc;
+    text-shadow: 2px 4px 10px #83a6c6;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%, -0%);
+  }
 }
