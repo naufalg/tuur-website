@@ -12,7 +12,7 @@ let displayOrder = async () => {
       let noticeDiv = document.querySelector(".no-order");
       let TextNotice = document.createElement("p");
       TextNotice.className = " text-center col";
-      TextNotice.innerHTML = "Login first to make order =/";
+      TextNotice.innerHTML = `Login first to make order ¯\\_(ツ)_/¯`;
       let goToOrderBtn = document.createElement("a");
       goToOrderBtn.className = "btn btn-outline-info";
       goToOrderBtn.setAttribute("href", "../register/register.html");
@@ -29,7 +29,7 @@ let displayOrder = async () => {
         let noticeDiv = document.querySelector(".no-order");
         let TextNotice = document.createElement("p");
         TextNotice.className = " text-center col";
-        TextNotice.innerHTML = "You don't have any order";
+        TextNotice.innerHTML = "You don't have any order (‘◇’)?";
         let goToOrderBtn = document.createElement("a");
         goToOrderBtn.className = "btn btn-outline-info";
         goToOrderBtn.setAttribute("href", "../Product/product.html");
