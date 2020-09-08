@@ -140,10 +140,6 @@ body {
   margin-top: 40px;
 }
 
-.test {
-  background-color: #315375;
-}
-
 /* media query */
 /* large screen */
 /* small screen */
@@ -167,6 +163,9 @@ body {
     left: 0%;
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
+  }
+  .bagian-gambar {
+    padding: 80px;
   }
 }
 /*# sourceMappingURL=style.css.map */
