@@ -1,70 +1,167 @@
 // jshint esversion:10
 
+// display product data
 let displayData = async () => {
   try {
     let url1 = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/hotel";
-    let img1 = "../../assets/images/hotel-bedroom.jpg";
+    let img1Src = "../../assets/images/hotel-bedroom.jpg";
     let response1 = await fetch(url1);
     let data1 = await response1.json();
+    console.log(data1);
     data1.forEach((element) => {
+      console.log(element);
+      console.log(element.hotel);
+      console.log(element.price);
       let displayData1 = document.querySelector(".display-data1");
-      let card1 = document.createElement("div");
-      card1.className = "col-md-4";
-      card1.innerHTML = `
-      <div class="card slideanim">
-      <img class="card-img-top" src=${img1} alt="Card image cap">
+      // div col
+      let div1 = document.createElement("div");
+      div1.className = "col-md-4";
+      // div card
+      let divCard1 = document.createElement("div");
+      divCard1.className = "card slideanim";
+      // img
+      let img1 = document.createElement("img");
+      img1.className = "card-img-top";
+      img1.setAttribute("src", `${img1Src}`);
+      // div card body
+      let card1Body = document.createElement("div");
+      card1Body.className = "card-body";
+      // title h5
+      let titleCard1 = document.createElement("h5");
+      titleCard1.className = "card-title";
+      titleCard1.innerHTML = `${element.hotel}`;
+      // text p
+      let textCard1 = document.createElement("p");
+      textCard1.className = "card-text";
+      textCard1.innerHTML = `$ ${element.price}/night`;
+      // button book
+      let button1 = document.createElement("button");
+      button1.className = "btn btn-success";
+      button1.innerHTML = "Book";
+      button1.addEventListener("click", function () {
+        funcBook(element.hotel, element.price);
+      });
+      displayData1.appendChild(div1);
+      div1.appendChild(img1);
+      div1.appendChild(card1Body);
+      card1Body.appendChild(titleCard1);
+      card1Body.appendChild(textCard1);
+      card1Body.appendChild(button1);
 
-<div class="card-body">
-  <h5 class="card-title">${element.hotel}</h5>
-  <p class="card-text">
-  $ ${element.price}/night
-  </p>
-  <button
-  type="button"
-  class="btn btn-sm btn-outline-success"
->
-  Book
-</button>
-</div>
-</div>
-<br>
-`;
-      displayData1.appendChild(card1);
+      //       div1.innerHTML = `
+      //       <div class="card slideanim">
+      //       <img class="card-img-top" src=${img1} alt="Card image cap">
+
+      // <div class="card-body">
+      //   <h5 class="card-title">${element.hotel}</h5>
+      //   <p class="card-text">
+      //   $ ${element.price}/night
+      //   </p>
+      // </div>
+      // </div>
+      // <br>
+      // `;
+
+      // displayData1.appendChild(div1);
     });
 
-    let url2 = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Attraction";
-    let img2 = "../../assets/images/ferris-wheel.jpg";
-    let response2 = await fetch(url2);
-    let data2 = await response2.json();
-    data2.forEach((element) => {
-      let displayData2 = document.querySelector(".display-data2");
-      let card2 = document.createElement("div");
-      card2.className = "col-md-4";
-      card2.innerHTML = `
-      <div class="card slideanim">
-      <img class="card-img-top" src=${img2} alt="Card image cap">
+    //     let url2 = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Attraction";
+    //     let img2 = "../../assets/images/ferris-wheel.jpg";
+    //     let response2 = await fetch(url2);
+    //     let data2 = await response2.json();
+    //     data2.forEach((element) => {
+    //       let displayData2 = document.querySelector(".display-data2");
+    //       let card2 = document.createElement("div");
+    //       card2.className = "col-md-4";
+    //       card2.innerHTML = `
+    //       <div class="card slideanim">
+    //       <img class="card-img-top" src=${img2} alt="Card image cap">
 
-<div class="card-body">
-  <h5 class="card-title">${element.attraction}</h5>
-  <p class="card-text">
-  $ ${element.price}
-  </p>
-  <button
-  type="button"
-  class="btn btn-sm btn-outline-success"
->
-  Book
-</button>
-</div>
-</div>
-<br>
-`;
-      displayData2.appendChild(card2);
-    });
+    // <div class="card-body">
+    //   <h5 class="card-title">${element.attraction}</h5>
+    //   <p class="card-text">
+    //   $ ${element.price}
+    //   </p>
+    //   <button
+    //   type="button"
+    //   class="btn btn-sm btn-outline-success"
+    // >
+    //   Book
+    // </button>
+    // </div>
+    // </div>
+    // <br>
+    // `;
+    //       displayData2.appendChild(card2);
+    //     });
   } catch {
     console.log("Error");
   }
 };
+
+let count;
+
+// funcbook function
+function funcBook(hotelName, price) {
+  count++;
+  let oldItems = localStorage.getItem("order");
+  console.log("oldItems", oldItems);
+  let parsedOldItems = JSON.parse(oldItems);
+  console.log("parsedOI", parsedOldItems);
+  if (parsedOldItems == null) {
+    let cartArray = [];
+    localStorage.setItem(
+      "order",
+      JSON.stringify({
+        hotelName: hotelName,
+        price: price,
+        orderId: count,
+      })
+    );
+  } else {
+    let newItem = {
+      hotelName: hotelName,
+      price: price,
+      orderId: count,
+    };
+    cartArray.push(newItem);
+    console.log("cartArr",cartArray);
+    localStorage.setItem("order", JSON.stringify(cartArray));
+  }
+
+  // oldItems = oldItems ? JSON.parse(oldItems) : {};
+
+  // oldItems;
+
+  // for (i = 1; i < oldItems.length; i++) {
+  //   oldItems[i]["orderId "] = i;
+  // }
+
+  // console.log(oldItems);
+  // let newItem = {
+  //   "hotelName": hotelName,
+  //   "price": price
+  // };
+
+  // oldItems.push(newItem);
+
+  // localStorage.setItem("order", JSON.stringify(oldItems));
+
+  // let orderData = JSON.stringify({
+  //   orderId: i
+  //   hotelName: hotelName,
+  //   price: price,
+  // });
+
+  // localStorage.setItem(
+  //   "order",
+  //   JSON.stringify({
+  //     hotelName: hotelName,
+  //     price: price,
+  //     orderId: i,
+  //   })
+  // );
+}
 
 displayData();
 
