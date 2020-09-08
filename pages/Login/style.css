@@ -101,6 +101,7 @@ body {
   background-position: center;
   background-size: cover;
   max-width: 100%;
+  border-radius: 50px 20px;
 }
 
 .bagian-tulisan {
@@ -118,10 +119,10 @@ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 48px;
   letter-spacing: -1px;
-  color: #fcfcfc;
+  color: #315375;
 }
 
 .signin {

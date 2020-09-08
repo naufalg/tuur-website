@@ -77,7 +77,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  font-family: "Roboto", sans-serif;
   overflow: hidden;
 }
 
@@ -100,6 +99,7 @@ body {
   background-position: center;
   background-size: cover;
   max-width: 100%;
+  border-radius: 50px 20px;
 }
 
 .bagian-tulisan {
@@ -122,17 +122,10 @@ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 25px;
   line-height: 48px;
   letter-spacing: -1px;
-  color: black;
-}
-
-.signin {
-  font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-weight: bold;
+  color: #315375;
 }
 
 .center {
@@ -140,7 +133,7 @@ body {
   width: 160px;
   display: block;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .test {
