@@ -15,7 +15,7 @@ let displayOrder = async () => {
       TextNotice.innerHTML = `Login first to make order ¯\\_(ツ)_/¯`;
       let goToOrderBtn = document.createElement("a");
       goToOrderBtn.className = "btn btn-outline-info";
-      goToOrderBtn.setAttribute("href", "../register/register.html");
+      goToOrderBtn.setAttribute("href", "../login/login.html");
       goToOrderBtn.innerHTML = "Login";
       noticeDiv.appendChild(TextNotice);
       noticeDiv.appendChild(goToOrderBtn);
