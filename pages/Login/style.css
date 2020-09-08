@@ -72,18 +72,25 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* main */
 body {
-  background-color: #315375;
+  background-image: url(https://lh4.googleusercontent.com/-XplyTa1Za-I/VMSgIyAYkHI/AAAAAAAADxM/oL-rD6VP4ts/w1184-h666/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
 /* id */
 /* class */
 .container {
   padding: 150px;
+  border-radius: 25px;
 }
 
 .row {
   background-color: #fff;
+  border-radius: 50px 20px;
 }
 
 .bagian-gambar {
@@ -97,6 +104,7 @@ body {
 }
 
 .bagian-tulisan {
+  font-size: 30px;
   color: #fcfcfc;
   text-shadow: 2px 4px 10px #83a6c6;
   position: absolute;
@@ -104,6 +112,16 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.judul {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -1px;
+  color: #fcfcfc;
 }
 
 .signin {
@@ -118,6 +136,7 @@ body {
   width: 160px;
   display: block;
   margin: auto;
+  margin-top: 40px;
 }
 
 .test {
