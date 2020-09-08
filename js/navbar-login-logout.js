@@ -1,14 +1,7 @@
-// jshint esversion:10
-
-// import { CountUp } from "./js/countUp.min.js";
-
-// window.onload = function () {
-//   var countUp = new CountUp("counter-1", 20000);
-//   countUp.start();
-// };
+// navbar dynamic login logout link
 let logout = () => {
   localStorage.clear();
-  window.location.replace("./index.html");
+  window.location.replace("../../index.html");
 };
 
 let btnDisplay = () => {
@@ -28,11 +21,11 @@ let btnDisplay = () => {
     btnGroup.setAttribute("role", "group");
     let loginLink = document.createElement("a");
     loginLink.className = "btn btn-outline-info";
-    loginLink.setAttribute("href", "./pages/Login/login.html");
+    loginLink.setAttribute("href", "../Login/login.html");
     loginLink.innerHTML = "Login";
     let signupLink = document.createElement("a");
     signupLink.className = "btn btn-info";
-    signupLink.setAttribute("href", "./pages/Register/register.html");
+    signupLink.setAttribute("href", "../Register/register.html");
     signupLink.innerHTML = "Signup";
     btnDisplay.appendChild(btnGroup);
     btnGroup.appendChild(loginLink);
@@ -41,7 +34,3 @@ let btnDisplay = () => {
 };
 
 btnDisplay();
-
-// let logout = () => {
-
-// }

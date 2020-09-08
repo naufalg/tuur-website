@@ -1,4 +1,40 @@
 // jshint esversion:10
+// navbar dynamic login logout link
+let logout = () => {
+  localStorage.clear();
+  window.location.replace("../../index.html");
+};
+
+let btnDisplay = () => {
+  let btnDisplay = document.querySelector("#btn-navbar");
+  let getUserData = localStorage.getItem("user");
+  console.log(getUserData);
+  if (getUserData !== null) {
+    let logoutLink = document.createElement("button");
+    logoutLink.className = "btn btn-outline-warning";
+    // logoutLink.setAttribute("href", "./pages/Login/login.html");
+    logoutLink.addEventListener("click", logout);
+    logoutLink.innerHTML = "Logout";
+    btnDisplay.appendChild(logoutLink);
+  } else {
+    let btnGroup = document.createElement("div");
+    btnGroup.className = "btn-group";
+    btnGroup.setAttribute("role", "group");
+    let loginLink = document.createElement("a");
+    loginLink.className = "btn btn-outline-info";
+    loginLink.setAttribute("href", "../Login/login.html");
+    loginLink.innerHTML = "Login";
+    let signupLink = document.createElement("a");
+    signupLink.className = "btn btn-info";
+    signupLink.setAttribute("href", "../Register/register.html");
+    signupLink.innerHTML = "Signup";
+    btnDisplay.appendChild(btnGroup);
+    btnGroup.appendChild(loginLink);
+    btnGroup.appendChild(signupLink);
+  }
+};
+
+btnDisplay();
 
 // display product data
 let displayData = async () => {
@@ -99,76 +135,73 @@ let displayData = async () => {
   }
 };
 
-function funcBook(hotelName, price) {
-  
-}
-
+function funcBook(hotelName, price) {}
 
 // let count;
 // let cartArray;
 // funcbook function
 // function funcBook(hotelName, price) {
-  // count += 1;
-  // let oldItems = localStorage.getItem("order");
-  // console.log("oldItems", oldItems);
-  // let parsedOldItems = JSON.parse(oldItems);
-  // console.log("parsedOI", parsedOldItems);
-  // let cartArray = [...parsedOldItems];
-  // console.log("cartArrayluar", cartArray);
-  // if (parsedOldItems == null) {
-  //   let cartArray = [];
-  //   let newItem = {
-  //     hotelName: hotelName,
-  //     price: price,
-  //     orderId: count,
-  //   };
-  //   cartArray.push(newItem);
-  //   console.log("cartArrayIf", cartArray);
-  //   localStorage.setItem("order", JSON.stringify(cartArray));
-  // } else {
-  //   let newItem = {
-  //     hotelName: hotelName,
-  //     price: price,
-  //     orderId: count,
-  //   };
-  //   console.log("arrayElseSblumPush",cartArray);
-  //   cartArray.push(newItem);
-  //   console.log("cartArrElse", cartArray);
-  //   localStorage.setItem("order", JSON.stringify(cartArray));
-  // }
+// count += 1;
+// let oldItems = localStorage.getItem("order");
+// console.log("oldItems", oldItems);
+// let parsedOldItems = JSON.parse(oldItems);
+// console.log("parsedOI", parsedOldItems);
+// let cartArray = [...parsedOldItems];
+// console.log("cartArrayluar", cartArray);
+// if (parsedOldItems == null) {
+//   let cartArray = [];
+//   let newItem = {
+//     hotelName: hotelName,
+//     price: price,
+//     orderId: count,
+//   };
+//   cartArray.push(newItem);
+//   console.log("cartArrayIf", cartArray);
+//   localStorage.setItem("order", JSON.stringify(cartArray));
+// } else {
+//   let newItem = {
+//     hotelName: hotelName,
+//     price: price,
+//     orderId: count,
+//   };
+//   console.log("arrayElseSblumPush",cartArray);
+//   cartArray.push(newItem);
+//   console.log("cartArrElse", cartArray);
+//   localStorage.setItem("order", JSON.stringify(cartArray));
+// }
 
-  // oldItems = oldItems ? JSON.parse(oldItems) : {};
+// oldItems = oldItems ? JSON.parse(oldItems) : {};
 
-  // oldItems;
+// oldItems;
 
-  // for (i = 1; i < oldItems.length; i++) {
-  //   oldItems[i]["orderId "] = i;
-  // }
+// for (i = 1; i < oldItems.length; i++) {
+//   oldItems[i]["orderId "] = i;
+// }
 
-  // console.log(oldItems);
-  // let newItem = {
-  //   "hotelName": hotelName,
-  //   "price": price
-  // };
+// console.log(oldItems);
+// let newItem = {
+//   "hotelName": hotelName,
+//   "price": price
+// };
 
-  // oldItems.push(newItem);
+// oldItems.push(newItem);
 
-  // localStorage.setItem("order", JSON.stringify(oldItems));
+// localStorage.setItem("order", JSON.stringify(oldItems));
 
-  // let orderData = JSON.stringify({
-  //   orderId: i
-  //   hotelName: hotelName,
-  //   price: price,
-  // });
+// let orderData = JSON.stringify({
+//   orderId: i
+//   hotelName: hotelName,
+//   price: price,
+// });
 
-  // localStorage.setItem(
-  //   "order",
-  //   JSON.stringify({
-  //     hotelName: hotelName,
-  //     price: price,
-  //     orderId: i,
-  //   })
-  // );
+// localStorage.setItem(
+//   "order",
+//   JSON.stringify({
+//     hotelName: hotelName,
+//     price: price,
+//     orderId: i,
+//   })
+// );
 // }
 
 displayData();
