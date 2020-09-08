@@ -74,23 +74,16 @@ let funcDelete = (idUser, idProduct) => {
       "Content-Type": "application/json",
     },
   };
+  
+
+
+
   fetch(urlDel, delOptions)
     .then((response) => {
       response.json();
     })
     .then(() => {
-      swal({
-        title: "Are you sure?",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-      }).then((willDelete) => {
-        if (willDelete) {
-          swal("Deleted successfully", {
-            icon: "success",
-          });
-          location.reload();
-        }
-      });
+      alert("Product deleted");
+      location.reload();
     });
 };
