@@ -8,7 +8,7 @@ async function funceditusername() {
   let response = await fetch(url);
   let data = await response.json();
 
-  let usernameedit = document.getElementsByClassName("form-control")[0];
+  let usernameedit = document.getElementsByClassName("form-control")[0].value;
   console.log(usernameedit);
 
   let dataKirim = {
