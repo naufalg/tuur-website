@@ -74,9 +74,6 @@ let funcDelete = (idUser, idProduct) => {
       "Content-Type": "application/json",
     },
   };
-  
-
-
 
   fetch(urlDel, delOptions)
     .then((response) => {
