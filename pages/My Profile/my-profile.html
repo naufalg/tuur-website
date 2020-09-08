@@ -2,24 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <title>Tuur - My Profile</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-  <!-- link css my profile -->
+    <!-- link css my profile -->
     <link rel="stylesheet" href="style.css" />
     <!-- link css dari index -->
-    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/tuur-icon.png" />
   </head>
   <body>
     <!-- navbar -->
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="./index.html">
-          <img src="../../assets/images/tuur.svg" width="150" height="30" alt="" />
+        <a class="navbar-brand" href="../../index.html">
+          <img
+            src="../../assets/images/tuur.svg"
+            width="150"
+            height="30"
+            alt=""
+          />
         </a>
         <button
           class="navbar-toggler"
@@ -35,24 +42,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="./index.html"
+              <a class="nav-link" href="../../index.html"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/Product/product.html"
-                >Destination</a
-              >
+              <a class="nav-link" href="../Product/product.html">Destination</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">My order</a>
             </li>
             <div class="btn-group" role="group" aria-label="Basic example">
               <button class="btn btn-outline-warning" type="button">
-                <a href="./pages/Login/login.html">Login</a>
+                <a href="../Login/login.html">Login</a>
               </button>
               <button class="btn btn btn-warning" type="button">
-                <a href="./pages/Register/register.html">Signup</a>
+                <a href="/pages/Register/register.html">Signup</a>
               </button>
             </div>
           </ul>
@@ -88,14 +93,16 @@
               <div class="card mb-3" style="max-width: 540px">
                 <div class="row no-gutters">
                   <div class="col-md-4">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" class="card-img" alt="..." />
+                    <img
+                      src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                      class="card-img"
+                      alt="..."
+                    />
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title">My Profile</h5>
-                      <div class="my-profile" class="card-text">
-
-                      </div>
+                      <div class="my-profile" class="card-text"></div>
                     </div>
                   </div>
                 </div>
@@ -106,6 +113,80 @@
         <!-- /#page-content-wrapper -->
       </div>
       <!-- /#wrapper -->
+
+      <!-- Footer -->
+      <footer class="page-footer font-small blue pt-4">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+              <!-- Content -->
+              <h5 class="text-uppercase">Tuur</h5>
+              <p>Around the world in your hands.</p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3" />
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+              <!-- Links -->
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a href="./index.html">Home</a>
+                </li>
+                <li>
+                  <a href="./pages/Product/product.html">Destination</a>
+                </li>
+                <li>
+                  <a href="./pages/My Profile/my-profile.html">My Profile</a>
+                </li>
+                <li>
+                  <a href="./pages/Register/register.html">Signup</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+              <!-- Links -->
+              <h5 class="text-uppercase">Social</h5>
+
+              <ul class="list-unstyled">
+                <li class="list-inline-item">
+                  <a href=""> <i class="fab fa-2x fa-facebook-f"> </i> </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href=""> <i class="fab fa-2x fa-twitter"> </i> </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="">
+                    <i class="fab fa-2x fa-instagram"> </i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href=""> <i class="fas fa-2x fa-envelope"> </i> </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+          Copyright: Tuur © 2020
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
 
       <!-- Bootstrap core JavaScript -->
       <script src="vendor/jquery/jquery.min.js"></script>
@@ -119,7 +200,7 @@
         });
       </script>
     </div>
-<script src="/index.js"></script>
+    <script src="/index.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

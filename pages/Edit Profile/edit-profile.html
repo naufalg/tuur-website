@@ -3,16 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Edit Profile - Tuur</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <!-- link css edit profile -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- link css dari index -->
+    <link rel="stylesheet" href="../../style/style.css" />
   </head>
   <body>
+    <!-- navbar -->
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="../../assets/images/tuur.png"
+            width="150"
+            height="30"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/Product/product.html"
+                >Destination</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My order</a>
+            </li>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button class="btn btn-outline-warning" type="button">
+                <a href="./pages/Login/login.html">Login</a>
+              </button>
+              <button class="btn btn btn-warning" type="button">
+                <a href="./pages/Register/register.html">Signup</a>
+              </button>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <div>
       <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
@@ -78,6 +131,80 @@
         <!-- /#page-content-wrapper -->
       </div>
       <!-- /#wrapper -->
+
+      <!-- Footer -->
+      <footer class="page-footer font-small blue pt-4">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+              <!-- Content -->
+              <h5 class="text-uppercase">Tuur</h5>
+              <p>Around the world in your hands.</p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3" />
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+              <!-- Links -->
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a href="./index.html">Home</a>
+                </li>
+                <li>
+                  <a href=./pa"ges/Product/product.html">Destination</a>
+                </li>
+                <li>
+                  <a href="./pages/My Profile/my-profile.html">My Profile</a>
+                </li>
+                <li>
+                  <a href="./pages/Register/register.html">Signup</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+              <!-- Links -->
+              <h5 class="text-uppercase">Social</h5>
+
+              <ul class="list-unstyled">
+                <li class="list-inline-item">
+                  <a href=""> <i class="fab fa-2x fa-facebook-f"> </i> </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href=""> <i class="fab fa-2x fa-twitter"> </i> </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="">
+                    <i class="fab fa-2x fa-instagram"> </i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href=""> <i class="fas fa-2x fa-envelope"> </i> </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+          Copyright: Tuur © 2020
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
 
       <!-- Bootstrap core JavaScript -->
       <script src="vendor/jquery/jquery.min.js"></script>
