@@ -7,11 +7,15 @@ let logout = () => {
 let btnDisplay = () => {
   let btnDisplay = document.querySelector("#btn-navbar");
   let getUserData = localStorage.getItem("user");
-  console.log(getUserData);
+  let parsedUserData = JSON.parse(getUserData);
+  console.log("JSON", getUserData);
+  console.log("parsed", parsedUserData);
   if (getUserData !== null) {
+    let userProfile = document.getElementById("user-profile");
+    userProfile.setAttribute("href", "../My Profile/my-profile.html");
+    userProfile.innerHTML = `${parsedUserData.name}`;
     let logoutLink = document.createElement("button");
     logoutLink.className = "btn btn-outline-warning";
-    // logoutLink.setAttribute("href", "./pages/Login/login.html");
     logoutLink.addEventListener("click", logout);
     logoutLink.innerHTML = "Logout";
     btnDisplay.appendChild(logoutLink);
