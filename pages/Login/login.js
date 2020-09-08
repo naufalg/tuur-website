@@ -20,6 +20,12 @@ async function login() {
       //email terdaftar
       // check password dari user data dan value password
       if (user[0].password === password) {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Anda Berhasil login",
+          showConfirmButton: true,
+        });
         // simpan data ke localStorage
         localStorage.setItem("user", JSON.stringify(user[0]));
         // redirect ke home
