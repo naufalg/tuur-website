@@ -1,7 +1,7 @@
-// --------------- ELEMENTS ----------------
+// --------------- elements ----------------
 let button = document.getElementById("button");
 
-// --------------- FETCH ----------------
+// --------------- fetch ----------------
 let endpoint = `https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users`;
 
 // --------------- Functions ----------------
@@ -27,36 +27,31 @@ async function login() {
         Swal.fire({
           position: "center",
           icon: "error",
-          title: "Wrong email or password!",
+          title: "Email atau password yang anda masukkan salah!",
           showConfirmButton: true,
-          // timer: 5000,
         });
-        // alert("Wrong email or password!");
       }
     } else if (email == "" && password == "") {
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "Please fill email and password!",
+        title: "Silahkan isi email dan password anda!",
         showConfirmButton: true,
-        // timer: 5000,
       });
     } else {
       // ketika email tidak ketemu by filter method
       Swal.fire({
         position: "center",
         icon: "warning",
-        title: "Your email has not been registered yet",
+        title: "Mohon maaf email anda tidak terdaftar",
         showConfirmButton: true,
-        // timer: 5000,
       });
-      // alert("Your email has not been registered yet");
     }
   } catch (error) {
     console.error(error);
   }
 }
-// --------------- EVENT LISTENER ----------------
+// --------------- event listener ----------------
 button.addEventListener("click", function () {
   login();
 });
