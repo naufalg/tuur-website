@@ -1,12 +1,12 @@
-let userdummy = {
-  id: "1",
-  createdAt: "2020-09-07T02:38:01.294Z",
-  username: "username 1",
-  password: "password 1",
-};
+// let userdummy = {
+//   id: "1",
+//   createdAt: "2020-09-07T02:38:01.294Z",
+//   username: "username 1",
+//   password: "password 1",
+// };
 
-localStorage.setItem("user", JSON.stringify(userdummy)
-);
+// localStorage.setItem("user", JSON.stringify(userdummy)
+// );
 
 // localStorage.removeItem("user")
 
