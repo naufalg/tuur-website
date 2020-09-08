@@ -101,7 +101,11 @@ let funcBook = async (hotelName, price) => {
   try {
     let user = JSON.parse(localStorage.getItem("user"));
     if (user === null) {
-      alert("Please Login First")
+      swal({
+        title: "Please login first",
+        icon: "warning",
+        button: "OK",
+      });
     } else {
       console.log("user", user.id);
       let userId = user.id;
@@ -125,7 +129,12 @@ let funcBook = async (hotelName, price) => {
       );
       let result = await response.json();
       console.log(result);
-      alert(`${hotelName} added!`);
+      swal({
+        title: "Success!",
+        text: `${hotelName} added!`,
+        icon: "success",
+        button: "Proceed",
+      });      
     }
   } catch {
     console.log("error");

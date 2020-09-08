@@ -79,7 +79,18 @@ let funcDelete = (idUser, idProduct) => {
       response.json();
     })
     .then(() => {
-      alert("Product deleted");
-      location.reload();
+      swal({
+        title: "Are you sure?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((willDelete) => {
+        if (willDelete) {
+          swal("Deleted successfully", {
+            icon: "success",
+          });
+          location.reload();
+        }
+      });
     });
 };
