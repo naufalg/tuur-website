@@ -2,4 +2,4 @@
 
 > Mengenal lebih dalam tentang Tuur Site
 
-Tuur site muncul ketika seorang tiga pemuda ingin berlibur dimana mereka mengalami kesusahan saat mencari reservasi booking hotel yang cukup mahal di beberapa e-commerce travel ,nah maka dari kerasahan tersebut munculah ide dimana seseorang bisa membeli sebuah reservasi hotel murah sesuai budget seorang traveller sejati yaitu Tuur site.
+Tuur site muncul ketika seorang tiga pemuda ingin berlibur dimana mereka mengalami kesusahan saat mencari reservasi booking hotel yang cukup mahal di beberapa e-commerce travel ,nah maka dari keresahan tersebut munculah ide dimana seseorang bisa membeli sebuah reservasi hotel murah sesuai budget seorang traveller sejati yaitu Tuur site.
