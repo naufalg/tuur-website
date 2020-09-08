@@ -1,3 +1,4 @@
+// jshint esversion:6
 // --------------- element ----------------
 let signupBtn = document.getElementById("signup");
 

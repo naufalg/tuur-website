@@ -1,3 +1,4 @@
+// jshint esversion:10
 // --------------- elements ----------------
 let button = document.getElementById("button");
 

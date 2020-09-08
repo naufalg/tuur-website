@@ -39,6 +39,7 @@ let btnDisplay = () => {
 };
 
 btnDisplay();
+// navbar dynamic login logout link
 
 // display product data
 let displayData = async () => {
@@ -87,59 +88,41 @@ let displayData = async () => {
       card1Body.appendChild(titleCard1);
       card1Body.appendChild(textCard1);
       card1Body.appendChild(button1);
-
-      //       div1.innerHTML = `
-      //       <div class="card slideanim">
-      //       <img class="card-img-top" src=${img1} alt="Card image cap">
-
-      // <div class="card-body">
-      //   <h5 class="card-title">${element.hotel}</h5>
-      //   <p class="card-text">
-      //   $ ${element.price}/night
-      //   </p>
-      // </div>
-      // </div>
-      // <br>
-      // `;
-
-      // displayData1.appendChild(div1);
     });
-
-    //     let url2 = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Attraction";
-    //     let img2 = "../../assets/images/ferris-wheel.jpg";
-    //     let response2 = await fetch(url2);
-    //     let data2 = await response2.json();
-    //     data2.forEach((element) => {
-    //       let displayData2 = document.querySelector(".display-data2");
-    //       let card2 = document.createElement("div");
-    //       card2.className = "col-md-4";
-    //       card2.innerHTML = `
-    //       <div class="card slideanim">
-    //       <img class="card-img-top" src=${img2} alt="Card image cap">
-
-    // <div class="card-body">
-    //   <h5 class="card-title">${element.attraction}</h5>
-    //   <p class="card-text">
-    //   $ ${element.price}
-    //   </p>
-    //   <button
-    //   type="button"
-    //   class="btn btn-sm btn-outline-success"
-    // >
-    //   Book
-    // </button>
-    // </div>
-    // </div>
-    // <br>
-    // `;
-    //       displayData2.appendChild(card2);
-    //     });
   } catch {
     console.log("Error");
   }
 };
 
-function funcBook(hotelName, price) {}
+displayData();
+
+// book
+let funcBook = async (hotelName, price) => {
+  let user = JSON.parse(localStorage.getItem("user"));
+  console.log("user", user.id);
+  let userId = user.id;
+  console.log("hotel", hotelName);
+  console.log("price", price);
+
+  let postOption = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      hotel: hotelName,
+      price: price,
+    }),
+  };
+
+  let response = await fetch(
+    `https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users/${userId}/order/`,
+    postOption
+  );
+  let result = await response.json();
+  console.log(result);
+  alert(`${hotelName} added!`)
+};
 
 // let count;
 // let cartArray;
@@ -207,8 +190,6 @@ function funcBook(hotelName, price) {}
 //   })
 // );
 // }
-
-displayData();
 
 // let getLocation = async () => {
 //   let url = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Destination";

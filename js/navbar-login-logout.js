@@ -1,3 +1,4 @@
+// jshint esversion:6
 // navbar dynamic login logout link
 let logout = () => {
   localStorage.clear();
