@@ -1,3 +1,4 @@
+// jshint esversion:10
 // buat function async await register
 const register = async () => {
   console.log("register");
@@ -9,7 +10,7 @@ const register = async () => {
   console.log("isi inputan", nameInput, userNameInput, passwordInput);
 
   let userData = {
-    nama: nameInput,
+    name: nameInput,
     username: userNameInput,
     password: passwordInput,
   };
@@ -22,10 +23,9 @@ const register = async () => {
     },
     body: JSON.stringify(userData),
   };
-  let response = await fetch(
-    "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users/",
-    options
-  );
+
+  let url1 = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users";
+  let response = await fetch(url1, options);
   let result = await response.json();
   console.log(result);
 };

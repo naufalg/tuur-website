@@ -99,35 +99,43 @@ let displayData = async () => {
   }
 };
 
-let count;
-
-// funcbook function
 function funcBook(hotelName, price) {
-  count++;
-  let oldItems = localStorage.getItem("order");
-  console.log("oldItems", oldItems);
-  let parsedOldItems = JSON.parse(oldItems);
-  console.log("parsedOI", parsedOldItems);
-  if (parsedOldItems == null) {
-    let cartArray = [];
-    localStorage.setItem(
-      "order",
-      JSON.stringify({
-        hotelName: hotelName,
-        price: price,
-        orderId: count,
-      })
-    );
-  } else {
-    let newItem = {
-      hotelName: hotelName,
-      price: price,
-      orderId: count,
-    };
-    cartArray.push(newItem);
-    console.log("cartArr",cartArray);
-    localStorage.setItem("order", JSON.stringify(cartArray));
-  }
+  
+}
+
+
+// let count;
+// let cartArray;
+// funcbook function
+// function funcBook(hotelName, price) {
+  // count += 1;
+  // let oldItems = localStorage.getItem("order");
+  // console.log("oldItems", oldItems);
+  // let parsedOldItems = JSON.parse(oldItems);
+  // console.log("parsedOI", parsedOldItems);
+  // let cartArray = [...parsedOldItems];
+  // console.log("cartArrayluar", cartArray);
+  // if (parsedOldItems == null) {
+  //   let cartArray = [];
+  //   let newItem = {
+  //     hotelName: hotelName,
+  //     price: price,
+  //     orderId: count,
+  //   };
+  //   cartArray.push(newItem);
+  //   console.log("cartArrayIf", cartArray);
+  //   localStorage.setItem("order", JSON.stringify(cartArray));
+  // } else {
+  //   let newItem = {
+  //     hotelName: hotelName,
+  //     price: price,
+  //     orderId: count,
+  //   };
+  //   console.log("arrayElseSblumPush",cartArray);
+  //   cartArray.push(newItem);
+  //   console.log("cartArrElse", cartArray);
+  //   localStorage.setItem("order", JSON.stringify(cartArray));
+  // }
 
   // oldItems = oldItems ? JSON.parse(oldItems) : {};
 
@@ -161,7 +169,7 @@ function funcBook(hotelName, price) {
   //     orderId: i,
   //   })
   // );
-}
+// }
 
 displayData();
 

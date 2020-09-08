@@ -13,7 +13,10 @@ let displayOrder = () => {
   let btnCancel = document.createElement("button");
   btnCancel.className = "btn btn-danger rounded-circle";
   btnCancel.innerHTML = "X";
-  orderList.innerHTML = `&nbsp; &nbsp;${orderData.hotelName} | $ ${orderData.price}`;
+  orderData.forEach(element => {
+    orderList.innerHTML = `&nbsp; &nbsp;${element.hotelName} | $ ${element.price}`;
+
+  });
   orderUl.appendChild(orderList);
   orderList.appendChild(btnCancel);
 };
