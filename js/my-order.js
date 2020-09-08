@@ -16,7 +16,7 @@ let displayOrder = async () => {
       let goToOrderBtn = document.createElement("a");
       goToOrderBtn.className = "btn btn-outline-info";
       goToOrderBtn.setAttribute("href", "../register/register.html");
-      goToOrderBtn.innerHTML = "Signup Now!";
+      goToOrderBtn.innerHTML = "Login";
       noticeDiv.appendChild(TextNotice);
       noticeDiv.appendChild(goToOrderBtn);
     } else {
