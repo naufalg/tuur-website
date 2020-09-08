@@ -14,7 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- Title diganti sesuai page -->
-    <title>Destination - Tuur</title>
+    <title>My Order - Tuur</title>
     <!-- css -->
     <!-- bootstrap -->
     <link
@@ -77,15 +77,15 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="../../index.html">Home </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="./product.html"
-                >Destination <span class="sr-only">(current)</span></a
+              <a class="nav-link" href="../../index.html"
+                >Home <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../My-order/my-order.html">My order</a>
+              <a class="nav-link" href="../Product/product.html">Destination</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./my-order.html">My order</a>
             </li>
             <div class="btn-group" role="group" aria-label="Basic example">
               <button class="btn btn-outline-warning" type="button">
@@ -102,28 +102,21 @@
     <!-- main -->
     <main>
       <section>
-        <!-- jumbotron -->
-        <div class="jumbotron jumbotron-fluid bg-cover">
-          <div class="overlay"></div>
-          <div class="container text-light shadow-text text-right">
-            <h1 class="display-4">Experience best of both World</h1>
-            <p class="lead nunito">
-              From east to western hemisphere, with love.
-            </p>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col"><h4 class="display-4">My Order</h4></div>
           </div>
-        </div>
-        <div class="main-content container">
-          <hr class="featurette-divider" />
-          <div class="container">
-            <p class="display-4 text-center">Hotel</p>
-            <div class="row display-data1"></div>
+          <br />
+          <div class="row">
+            <div class="col text-left">
+              <ul class="list-group display-order">
+              </ul>
+              <br />
+
+              <button class="btn btn-success pull-right">Checkout</button>
+            </div>
           </div>
           <hr class="featurette-divider" />
-          <!-- <div class="container">
-            <p class="display-4 text-center">Attraction</p>
-            <div class="row display-data2"></div>
-          </div>
-          <hr class="featurette-divider" /> -->
         </div>
       </section>
     </main>
@@ -154,7 +147,7 @@
                 <a href="../../index.html">Home</a>
               </li>
               <li>
-                <a href="./product.html">Destination</a>
+                <a href="../Product/product.html">Destination</a>
               </li>
               <li>
                 <a href="../My Profile/my-profile.html">My Profile</a>
@@ -218,7 +211,6 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
-    <script src="../../js/product.js"></script>
     <script>
       $(window).scroll(function () {
         $(".slideanim").each(function () {
@@ -231,15 +223,6 @@
         });
       });
     </script>
+    <script src="../../js/my-order.js" type="module"></script>
   </body>
 </html>
-<!-- 
-<div class="card slideanim">
-  <img class="card-img-top" src="${img1}" alt="Card image cap" />
-
-  <div class="card-body">
-    <h5 class="card-title">${element.hotel}</h5>
-    <p class="card-text">$ ${element.price}/night</p>
-  </div>
-</div>
-<br /> -->
