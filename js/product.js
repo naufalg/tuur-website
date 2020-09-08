@@ -56,7 +56,7 @@ let displayData = async () => {
       let displayData1 = document.querySelector(".display-data1");
       // div col
       let div1 = document.createElement("div");
-      div1.className = "col-md-4";
+      div1.className = "col-md-4 shadow";
       // div card
       let divCard1 = document.createElement("div");
       divCard1.className = "card slideanim";
@@ -77,7 +77,7 @@ let displayData = async () => {
       textCard1.innerHTML = `$ ${element.price}/night`;
       // button book
       let button1 = document.createElement("button");
-      button1.className = "btn btn-success";
+      button1.className = "btn btn-success shadow-sm";
       button1.innerHTML = "Book";
       button1.addEventListener("click", function () {
         funcBook(element.hotel, element.price);
@@ -98,30 +98,38 @@ displayData();
 
 // book
 let funcBook = async (hotelName, price) => {
-  let user = JSON.parse(localStorage.getItem("user"));
-  console.log("user", user.id);
-  let userId = user.id;
-  console.log("hotel", hotelName);
-  console.log("price", price);
+  try {
+    let user = JSON.parse(localStorage.getItem("user"));
+    if (user === null) {
+      alert("Please Login First")
+    } else {
+      console.log("user", user.id);
+      let userId = user.id;
+      console.log("hotel", hotelName);
+      console.log("price", price);
 
-  let postOption = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      hotel: hotelName,
-      price: price,
-    }),
-  };
+      let postOption = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          hotel: hotelName,
+          price: price,
+        }),
+      };
 
-  let response = await fetch(
-    `https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users/${userId}/order/`,
-    postOption
-  );
-  let result = await response.json();
-  console.log(result);
-  alert(`${hotelName} added!`)
+      let response = await fetch(
+        `https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users/${userId}/order/`,
+        postOption
+      );
+      let result = await response.json();
+      console.log(result);
+      alert(`${hotelName} added!`);
+    }
+  } catch {
+    console.log("error");
+  }
 };
 
 // let count;

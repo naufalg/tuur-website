@@ -15,10 +15,10 @@ let btnDisplay = () => {
   let btnDisplay = document.querySelector("#btn-navbar");
   let getUserData = localStorage.getItem("user");
   let parsedUserData = JSON.parse(getUserData);
-  console.log("JSON",getUserData);
+  console.log("JSON", getUserData);
   console.log("parsed", parsedUserData);
   if (getUserData !== null) {
-    let userProfile = document.getElementById("user-profile")
+    let userProfile = document.getElementById("user-profile");
     userProfile.setAttribute("href", "./pages/My Profile/my-profile.html");
     userProfile.innerHTML = `${parsedUserData.name}`;
     let logoutLink = document.createElement("button");
