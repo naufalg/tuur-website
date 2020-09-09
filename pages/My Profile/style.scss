@@ -73,6 +73,11 @@ body::-webkit-scrollbar-thumb:hover {
 body {
 }
 
+
+main {
+  margin-top: 11vh;
+}
+
 /* id */
 #nav {
 }
@@ -91,6 +96,9 @@ body {
 
 /* tablet */
 @media (max-width: 768px) {
+  main {
+    margin-top: 8vh;
+  }
 }
 
 /* phone */

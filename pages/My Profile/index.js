@@ -11,7 +11,7 @@
 // localStorage.removeItem("user")
 
 
-let myprofile = document.querySelector("#my-profile");
+// let myprofile = document.querySelector("#my-profile");
 
 const showMyProfile = async () => {
   try {
@@ -23,11 +23,34 @@ const showMyProfile = async () => {
       `https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users/${user.id}`
     );
     let data = await response.json();
-    console.log(data);
+    console.log("data",data);
 
-    let inputnama = document.getElementsByClassName("card-title")[0];
-    console.log(inputnama);
-    inputnama.innerHTML = data.username
+    // card
+    let cardUser = document.querySelector(".user-data")
+    // card title
+    let cardTitle = document.createElement("h5")
+    cardTitle.className="card-title"
+    cardTitle.innerHTML=`Username: <br>&nbsp;&nbsp; ${data.name}`
+    // email text
+    let textEmail = document.createElement("p")
+    textEmail.className="card-text"
+    textEmail.innerHTML=`E-mail:<br>&nbsp;&nbsp; ${data.email}`
+    // edit profile button
+    let btnEditProfile = document.createElement("a")
+    btnEditProfile.className = "btn btn-outline-info"
+    btnEditProfile.innerHTML = "Edit profile"
+    btnEditProfile.setAttribute("href", "../edit profile/edit-profile.html")
+    cardUser.appendChild(cardTitle)
+    cardUser.appendChild(textEmail)
+    cardUser.appendChild(btnEditProfile)
+    
+
+
+    // let inputnama = document.getElementsByClassName("card-title");
+    // console.log(inputnama);
+    // inputnama.innerHTML = data.name
+
+    
     
     
 
@@ -54,7 +77,7 @@ const showMyProfile = async () => {
 };
 showMyProfile();
 
-function logout() {
+function funcLogout() {
   console.log("tes logout");
   localStorage.clear();
   window.location.replace("../../index.html");
