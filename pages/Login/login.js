@@ -29,7 +29,7 @@ async function login() {
         // simpan data ke localStorage
         localStorage.setItem("user", JSON.stringify(user[0]));
         // redirect ke home
-        window.location.href = "/index.html";
+        window.location.href = "../../index.html";
       } else {
         Swal.fire({
           position: "center",

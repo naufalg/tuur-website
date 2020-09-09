@@ -79,3 +79,20 @@ body::-webkit-scrollbar-thumb:hover {
 /* tablet */
 /* phone */
 /*# sourceMappingURL=style.css.map */
+
+/* main */
+main {
+  margin-top: 11vh;
+}
+
+/* id */
+/* class */
+/* media query */
+/* large screen */
+/* small screen */
+/* tablet */
+@media (max-width: 768px) {
+  main {
+    margin-top: 8vh;
+  }
+}

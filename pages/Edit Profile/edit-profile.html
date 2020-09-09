@@ -64,57 +64,46 @@
         </div>
       </nav>
     </header>
-    <div>
-      <div class="d-flex" id="wrapper">
-        <!-- Sidebar -->
-        <div class="bg-light border-right" id="sidebar-wrapper">
-          <div class="sidebar-heading"></div>
-          <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action bg-light"
-              >Dashboard</a
-            >
-            <a href="../My Profile/my-profile.html" class="list-group-item list-group-item-action bg-light"
-              >My Profile</a
-            >
-            <a href="#" class="list-group-item list-group-item-action bg-light"
-              >Edit Profile</a
-            >
-            <a href="#"  class="list-group-item list-group-item-action bg-light" onclick="logout()"
-              >Logout</a
-            >
-            <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-          <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-          <a href="#" class="list-group-item list-group-item-action bg-light">Status</a> -->
-          </div>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
+    <main>
+      <div class="container">
         <!-- Page Content -->
-        <div id="page-content-wrapper">
-          <div class="box-edit" class="container-fluid">
-            <div class="form-box-edit">
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">User Name</label>
-                  <input
-                    
-                    class="form-control"
-                    
-                  />
-                  <small id="emailHelp" class="form-text text-muted"
-                    ></small
-                  >
-                </div>
-                
-                </div>
-                <button type="submit" class="btn btn-primary" onclick="funceditusername()">Submit</button>
-              </form>
-            </div>
-          </div>
+        <!-- <div id="page-content-wrapper"> -->
+        <!-- <div class="container-fluid"> -->
+        <!-- card my profile -->
+        <!-- <div class="box-card"> -->
+        <hr class="featurette-divider" />
+  
+        <div class="row text-center">
+          <div class="col"><h5 class="display-4">Edit Profile</h5></div>
         </div>
+        <hr class="featurette-divider" />
+        <div class="row justify-content-center">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" name="emailedit" id="emailinput">
+        
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Username</label>
+              <input type="text" class="form-control" name="usernameedit" id="usernameinput" >
+            </div>
+            
+            <button onclick="funceditusername()" id="submitbtn"   class="btn btn-primary">Submit</button>
+            
+          </form>
+          
+        </div>
+        <hr class="featurette-divider" />
+
+        
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
         <!-- /#page-content-wrapper -->
       </div>
-      <!-- /#wrapper -->
+    </main>
+    
 
       <!-- Footer -->
       <footer class="page-footer font-small blue pt-4">
@@ -190,19 +179,10 @@
       </footer>
       <!-- Footer -->
 
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-      <!-- Menu Toggle Script -->
-      <script>
-        $("#menu-toggle").click(function (e) {
-          e.preventDefault();
-          $("#wrapper").toggleClass("toggled");
-        });
-      </script>
+      
+      
     </div>
-    <script src="/index.js"></script>
+    
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -219,6 +199,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../../js/navbar-login-logout.js"></script>
+    <script src="./index.js"></script>
 
   </body>
 </html>
