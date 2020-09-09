@@ -72,8 +72,12 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* main */
 body {
-  background-color: #5a7c9d;
-  font-family: "Roboto", sans-serif;
+  background-image: url(https://lh4.googleusercontent.com/-XplyTa1Za-I/VMSgIyAYkHI/AAAAAAAADxM/oL-rD6VP4ts/w1184-h666/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 /* id */
@@ -84,6 +88,7 @@ body {
 
 .row {
   background-color: #fff;
+  border-radius: 50px 20px;
 }
 
 .bagian-gambar {
@@ -94,6 +99,7 @@ body {
   background-position: center;
   background-size: cover;
   max-width: 100%;
+  border-radius: 50px 20px;
 }
 
 .bagian-tulisan {
@@ -112,11 +118,14 @@ body {
   text-align: center;
 }
 
-.signin {
-  font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.judul {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
   font-weight: bold;
+  font-size: 25px;
+  line-height: 48px;
+  letter-spacing: -1px;
+  color: #315375;
 }
 
 .center {
@@ -124,6 +133,7 @@ body {
   width: 160px;
   display: block;
   margin: auto;
+  margin-top: 30px;
 }
 
 .test {
@@ -137,7 +147,7 @@ body {
 /* phone */
 @media (max-width: 576px) {
   .container {
-    margin-top: 80px;
+    margin-top: 20px;
     padding: 60px;
   }
   img.center {
@@ -153,6 +163,9 @@ body {
     left: 0%;
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
+  }
+  .bagian-gambar {
+    padding: 80px;
   }
 }
 /*# sourceMappingURL=style.css.map */
