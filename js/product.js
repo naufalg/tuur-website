@@ -9,8 +9,8 @@ let btnDisplay = () => {
   let btnDisplay = document.querySelector("#btn-navbar");
   let getUserData = localStorage.getItem("user");
   let parsedUserData = JSON.parse(getUserData);
-  console.log("JSON", getUserData);
-  console.log("parsed", parsedUserData);
+  // console.log("JSON", getUserData);
+  // console.log("parsed", parsedUserData);
   if (getUserData !== null) {
     let userProfile = document.getElementById("user-profile");
     userProfile.setAttribute("href", "../My Profile/my-profile.html");
@@ -48,11 +48,11 @@ let displayData = async () => {
     let img1Src = "../../assets/images/hotel-bedroom.jpg";
     let response1 = await fetch(url1);
     let data1 = await response1.json();
-    console.log(data1);
+    // console.log(data1);
     data1.forEach((element) => {
-      console.log(element);
-      console.log(element.hotel);
-      console.log(element.price);
+      // console.log(element);
+      // console.log(element.hotel);
+      // console.log(element.price);
       let displayData1 = document.querySelector(".display-data1");
       // div col
       let div1 = document.createElement("div");
@@ -96,6 +96,58 @@ let displayData = async () => {
 
 displayData();
 
+// search
+let searchHotel = async () => {
+  try {
+    let searchInput = document.getElementById("search-input");
+    let searchValue = searchInput.value;
+    // console.log("searchInput", searchInput);
+    console.log("searchValue", searchValue);
+    let url1 = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/hotel";
+    let response1 = await fetch(url1);
+    let data1 = await response1.json();
+    console.log("data1", data1);
+    // filter search
+    let filterData = data1.filter((element) => element.hotel == searchValue);
+    console.log("filterData", filterData);
+    // empty data
+    let displayData1 = document.querySelector(".display-data1");
+    displayData1.innerHTML = "";
+    // show filter data
+    filterData.forEach((element) => {
+      // console.log(element);
+      // console.log(element.hotel);
+      // console.log(element.price);
+      let displayData1 = document.querySelector(".display-data1");
+      displayData1.innerHTML = `
+      <div class="row">
+      <div class="col-md-4 shadow">
+      <img class="card-img-top" src="../../assets/images/hotel-bedroom.jpg">
+      <div class="card-body">
+      <h5 class="card-title">${element.hotel}</h5>
+      <p class="card-text">$ ${element.price}/night</p>
+      <button class="btn btn-success shadow-sm search-button">Book</button>
+      <br>
+      </div>
+      </div>
+      </div>
+      <div class="row col-12 justify-content-center text-center">
+      <button class="btn btn-info text-center disp-all">Show all</button>
+      </div>
+      `;
+      let button1 = document.querySelector(".search-button");
+      button1.addEventListener("click", function () {
+        funcBook(element.hotel, element.price);
+      });
+      let dispAllBtn = document.querySelector(".disp-all")
+      dispAllBtn.addEventListener("click", function () {
+        location.reload()
+      })
+    });
+    // let filterSearch
+  } catch {}
+};
+
 // book
 let funcBook = async (hotelName, price) => {
   try {
@@ -107,10 +159,10 @@ let funcBook = async (hotelName, price) => {
         button: "OK",
       });
     } else {
-      console.log("user", user.id);
+      // console.log("user", user.id);
       let userId = user.id;
-      console.log("hotel", hotelName);
-      console.log("price", price);
+      // console.log("hotel", hotelName);
+      // console.log("price", price);
 
       let postOption = {
         method: "POST",
@@ -128,13 +180,13 @@ let funcBook = async (hotelName, price) => {
         postOption
       );
       let result = await response.json();
-      console.log(result);
+      // console.log(result);
       swal({
         title: "Success!",
         text: `${hotelName} added!`,
         icon: "success",
         button: "Proceed",
-      });      
+      });
     }
   } catch {
     console.log("error");
