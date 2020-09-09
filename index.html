@@ -78,16 +78,16 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/My-order/my-order.html">My order</a>
+              <a class="nav-link" href="./pages/My-order/my-order.html"
+                >My order</a
+              >
             </li>
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button class="btn btn-outline-warning" type="button">
-                <a href="./pages/Login/login.html">Login</a>
-              </button>
-              <button class="btn btn btn-warning" type="button">
-                <a href="./pages/Register/register.html">Signup</a>
-              </button>
-            </div>
+            <!-- dynamic navbar -->
+            <li class="nav-item">
+              <a class="nav-link" id="user-profile"></a>
+            </li>
+            <div id="btn-navbar"></div>
+            <!-- dynamic navbar -->
           </ul>
         </div>
       </nav>
@@ -328,12 +328,7 @@
                       <div
                         class="d-flex justify-content-end align-items-center"
                       >
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-success"
-                        >
-                          <a href="./pages/product/product.html">Find more</a>
-                        </button>
+                          <a class="btn btn-outline-success" href="./pages/product/product.html">Find more</a>
                       </div>
                     </div>
                   </div>
@@ -353,12 +348,7 @@
                       <div
                         class="d-flex justify-content-end align-items-center"
                       >
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-success"
-                        >
-                          <a href="./pages/product/product.html">Find more</a>
-                        </button>
+                          <a class="btn btn-outline-success" href="./pages/product/product.html">Find more</a>
                       </div>
                     </div>
                   </div>
@@ -380,12 +370,7 @@
                       <div
                         class="d-flex justify-content-end align-items-center"
                       >
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-success"
-                        >
-                          <a href="./pages/product/product.html">Find more</a>
-                        </button>
+                          <a class="btn btn-outline-success" href="./pages/product/product.html">Find more</a>
                       </div>
                     </div>
                   </div>
@@ -501,6 +486,6 @@
         });
       });
     </script>
-    <script src="./main.js" type="module"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

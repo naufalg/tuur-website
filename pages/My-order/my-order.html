@@ -87,14 +87,12 @@
             <li class="nav-item">
               <a class="nav-link active" href="./my-order.html">My order</a>
             </li>
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button class="btn btn-outline-warning" type="button">
-                <a href="../Login/login.html">Login</a>
-              </button>
-              <button class="btn btn btn-warning" type="button">
-                <a href="../Register/register.html">Signup</a>
-              </button>
-            </div>
+            <!-- dynamic navbar -->
+            <li class="nav-item">
+              <a class="nav-link" id="user-profile"></a>
+            </li>
+            <div id="btn-navbar"></div>
+            <!-- dynamic navbar -->
           </ul>
         </div>
       </nav>
@@ -106,16 +104,20 @@
           <div class="row">
             <div class="col"><h4 class="display-4">My Order</h4></div>
           </div>
+          <hr class="featurette-divider" />
           <br />
+          <div class="row"><div class="col no-order"></div></div>
           <div class="row">
-            <div class="col text-left">
-              <ul class="list-group display-order">
-              </ul>
-              <br />
-
-              <button class="btn btn-success pull-right">Checkout</button>
+            <div class="col text-center">
+              <ul class="list-group display-order"></ul>
             </div>
           </div>
+          <br />
+          <div class="row">
+            <div class="col btn-checkout"></div>
+          </div>
+
+          <div class="row text-center"></div>
           <hr class="featurette-divider" />
         </div>
       </section>
@@ -224,5 +226,7 @@
       });
     </script>
     <script src="../../js/my-order.js" type="module"></script>
+    <script src="../../js/navbar-login-logout.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
