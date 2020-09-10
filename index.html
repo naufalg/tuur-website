@@ -50,7 +50,9 @@
   <body>
     <!-- navbar -->
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light montserrat">
+      <nav
+        class="navbar fixed-top navbar-expand-lg navbar-light bg-light montserrat"
+      >
         <a class="navbar-brand" href="./index.html">
           <img src="./assets/images/tuur.png" width="150" height="30" alt="" />
         </a>
@@ -79,7 +81,8 @@
             </li>
             <!-- dynamic order -->
             <li class="nav-item">
-              <a class="nav-link" href="./pages/My-order/my-order.html">My Order<span class="badge badge-danger"></span>
+              <a class="nav-link" href="./pages/My-order/my-order.html"
+                >My Order<span class="badge badge-danger"></span>
               </a>
             </li>
             <!-- dynamic order -->
@@ -96,7 +99,7 @@
     <!-- main -->
     <main role="main">
       <!-- isi contentnya disini -->
-      <section>
+      <section class="carousel-top">
         <!-- carousel -->
         <div
           id="carouselExampleIndicators"
@@ -206,7 +209,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-4 slideanim">
+              <div class="col-lg-4 slideanim border-R">
                 <img
                   class="rounded-circle"
                   src="./assets/images/steal-deal.png"
@@ -230,7 +233,7 @@
                 <p>Paying never been easier with various options.</p>
               </div>
               <!-- /.col-lg-4 -->
-              <div class="col-lg-4 slideanim">
+              <div class="col-lg-4 slideanim border-L">
                 <img
                   class="rounded-circle"
                   src="./assets/images/safe-trip.png"
@@ -249,75 +252,83 @@
             <!-- /.row -->
 
             <!-- START THE FEATURETTES -->
-
-            <hr class="featurette-divider" />
-
-            <div class="row featurette slideanim">
-              <div class="col-md-7">
-                <table style="height: 100%; width: 100%">
-                  <tbody>
-                    <tr>
-                      <td class="align-middle">
-                        <h2
-                          class="featurette-heading display-4 asalign-middle text-center counter-1"
-                        >
-                          20,000+
-                          <br />
-                          Hotels
-                        </h2>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-md-5">
-                <img
-                  class="featurette-image img-fluid mx-auto"
-                  data-src="holder.js/500x500/auto"
-                  alt="500x500"
-                  style="width: 300px; height: 180px; border-radius: 10%"
-                  src="./assets/images/hotel-bedroom.jpg"
-                  data-holder-rendered="true"
-                />
-              </div>
+          </div>
+        </div>
+        <div class="container-fluid numbers">
+          <hr class="featurette-divider" />
+          <div class="row featurette slideanim">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+              <table style="height: 100%; width: 100%">
+                <tbody>
+                  <tr>
+                    <td class="align-middle">
+                      <h2
+                        class="featurette-heading heading-4 asalign-middle text-center counter-1"
+                      >
+                        20,000+
+                        <br />
+                        Hotels
+                      </h2>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-
-            <hr class="featurette-divider" />
-
-            <div class="row featurette slideanim">
-              <div class="col-md-7 order-md-2">
-                <table style="height: 100%; width: 100%">
-                  <tbody>
-                    <tr>
-                      <td class="align-middle">
-                        <h2
-                          class="featurette-heading display-4 align-middle text-center"
-                        >
-                          50,000+
-                          <br />
-                          Transport partners
-                        </h2>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-md-5 order-md-1">
-                <img
-                  class="featurette-image img-fluid mx-auto"
-                  data-src="holder.js/500x500/auto"
-                  alt="500x500"
-                  src="./assets/images/flight.png"
-                  data-holder-rendered="true"
-                  style="width: 200px; height: 200px; border-radius: 10%"
-                />
-              </div>
+            <div class="col-md-4 justify-content-center text-center">
+              <img
+                class="featurette-image img-fluid mx-auto"
+                data-src="holder.js/500x500/auto"
+                alt="500x500"
+                style="width: 400px; height: 250px; border-radius: 10%"
+                src="./assets/images/apartment.svg"
+                data-holder-rendered="true"
+              />
             </div>
+            <div class="col-md-2"></div>
+          </div>
 
-            <hr class="featurette-divider" />
+          <hr class="featurette-divider number-hr" />
 
-            <!-- cards -->
+          <div class="row featurette slideanim">
+            <div class="col-md-2"></div>
 
+            <div class="col-md-4 justify-content-center text-center">
+              <img
+                class="featurette-image img-fluid mx-auto"
+                data-src=""
+                alt=""
+                src="./assets/images/travel-choice.svg"
+                data-holder-rendered="true"
+                style="width: 300px; height: 300px; border-radius: 10%"
+              />
+            </div>
+            <div class="col-md-4">
+              <table style="height: 100%; width: 100%">
+                <tbody>
+                  <tr>
+                    <td class="align-middle">
+                      <h2
+                        class="featurette-heading heading-4 align-middle text-center"
+                      >
+                        50,000+
+                        <br />
+                        Transport partners
+                      </h2>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+
+          <hr class="featurette-divider" />
+        </div>
+
+        <!-- cards -->
+        <div class="container">
+          <div class="container marketing text-center">
             <div class="container">
               <div class="row slideanim">
                 <div class="col-md-4">
@@ -330,7 +341,7 @@
                       data-holder-rendered="true"
                       style="height: 225px; width: 100%; display: block"
                     />
-                    <div class="card-body">
+                    <div class="card-body shadow">
                       <p class="card-text">Get deals for Asia destination.</p>
                       <div
                         class="d-flex justify-content-end align-items-center"
@@ -354,7 +365,7 @@
                       data-holder-rendered="true"
                       style="height: 225px; width: 100%; display: block"
                     />
-                    <div class="card-body">
+                    <div class="card-body shadow">
                       <p class="card-text">Get deals for Europe destination.</p>
                       <div
                         class="d-flex justify-content-end align-items-center"
@@ -378,7 +389,7 @@
                       data-holder-rendered="true"
                       style="height: 225px; width: 100%; display: block"
                     />
-                    <div class="card-body">
+                    <div class="card-body shadow">
                       <p class="card-text">
                         Get deals for South-America destination.
                       </p>
@@ -412,7 +423,13 @@
           <!-- Grid column -->
           <div class="col-md-6 mt-md-0 mt-3">
             <!-- Content -->
-            <h5 class="text-uppercase">Tuur</h5>
+            <img
+              src="./assets/images/tuur.svg"
+              style="max-width: 200px"
+              alt="Tuur"
+            />
+            <br />
+            <!-- <h5 class="text-uppercase">Tuur</h5> -->
             <p>Around the world in your hands.</p>
           </div>
           <!-- Grid column -->

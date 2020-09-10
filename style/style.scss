@@ -146,6 +146,10 @@ body {
   margin: 9vh 0 0 0;
 }
 
+.carousel-top {
+  box-shadow: 0px 6px 3px 0px rgba(0, 0, 0, 0.7);
+}
+
 .shadow-text {
   text-shadow: 3px 3px 5px rgba(51, 51, 51, 0.7);
 }
@@ -201,12 +205,31 @@ body {
   opacity: 1;
 }
 
-
 // headline
 .marketing > div {
   margin: 5vh 0 0 0;
   // padding: 5vh;
 }
+
+.border-R {
+  border-right: 1px solid #cecdcd;
+}
+
+.border-L {
+  border-left: 1px solid #cecdcd;}
+
+.numbers {
+  // background-color: #20374e;
+  // color: white;
+  // -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+  //   5px 5px 15px 5px rgba(0, 0, 0, 0);
+  // box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+  //   5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+// .number-hr {
+//   border:1px solid white
+// }
 
 // footer
 .page-footer {
@@ -235,16 +258,17 @@ body {
   .carousel {
     margin: 5vh 0 0 0;
   }
-  h4, .caption1 {
+  h4,
+  .caption1 {
     display: none;
   }
 
-  .get-deals{
+  .get-deals {
     max-height: 8vh;
     // max-width: 10vw;
     font-size: 3em;
     margin: auto;
-  //   display: block;
+    //   display: block;
   }
 
   .caption1 {
@@ -254,6 +278,14 @@ body {
   .marketing > div {
     margin: 2vh 0 0 0;
     // padding: 5vh;
+  }
+
+  .border-R {
+    border: none;
+  }
+
+  .border-L {
+    border: none;
   }
 }
 
