@@ -53,7 +53,7 @@ let displayOrder = async () => {
         });
         let divCheckout = document.querySelector(".btn-checkout");
         let checkoutBtn = document.createElement("a");
-        checkoutBtn.setAttribute("href", "");
+        checkoutBtn.setAttribute("href", "../checkout/checkout.html");
         checkoutBtn.className = "btn btn-success";
         checkoutBtn.innerHTML = "Checkout";
         divCheckout.appendChild(checkoutBtn);

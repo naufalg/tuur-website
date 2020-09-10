@@ -1,0 +1,146 @@
+/* color */
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #8a8a8a;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #5c5c5c;
+}
+
+.slideanim {
+  visibility: hidden;
+}
+
+.slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+/* fonts */
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+.white {
+  color: #fff;
+}
+
+.black {
+  color: black;
+}
+
+.color-1 {
+  color: #fcfcfc;
+}
+
+.color-2 {
+  color: #315375;
+}
+
+.color-3 {
+  color: #5a7c9d;
+}
+
+.color-4 {
+  color: #83a6c6;
+}
+
+.color-5 {
+  color: #add0ef;
+}
+
+/* main */
+body {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+/* id */
+/* class */
+.marketing > div {
+  margin: 5vh 0 0 0;
+}
+
+.page-footer {
+  background-color: #1b1b1b;
+  color: #fcfcfc;
+}
+
+/* media query */
+/* large screen */
+/* small screen */
+/* tablet */
+/* phone */
+/*# sourceMappingURL=checkout.css.map */
