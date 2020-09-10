@@ -168,10 +168,6 @@ let searchHotel = async () => {
           location.reload();
         });
       });
-
-
-
-
     }
     // let filterSearch
   } catch {}
@@ -222,85 +218,25 @@ let funcBook = async (hotelName, price) => {
   }
 };
 
-// let count;
-// let cartArray;
-// funcbook function
-// function funcBook(hotelName, price) {
-// count += 1;
-// let oldItems = localStorage.getItem("order");
-// console.log("oldItems", oldItems);
-// let parsedOldItems = JSON.parse(oldItems);
-// console.log("parsedOI", parsedOldItems);
-// let cartArray = [...parsedOldItems];
-// console.log("cartArrayluar", cartArray);
-// if (parsedOldItems == null) {
-//   let cartArray = [];
-//   let newItem = {
-//     hotelName: hotelName,
-//     price: price,
-//     orderId: count,
-//   };
-//   cartArray.push(newItem);
-//   console.log("cartArrayIf", cartArray);
-//   localStorage.setItem("order", JSON.stringify(cartArray));
-// } else {
-//   let newItem = {
-//     hotelName: hotelName,
-//     price: price,
-//     orderId: count,
-//   };
-//   console.log("arrayElseSblumPush",cartArray);
-//   cartArray.push(newItem);
-//   console.log("cartArrElse", cartArray);
-//   localStorage.setItem("order", JSON.stringify(cartArray));
-// }
+// badge order
+let badgeOrder = async () => {
+  try {
+    let user = JSON.parse(localStorage.getItem("user"));
+    if (user == null) {
+    } else {
+      let response = await fetch(
+        `https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users/${user.id}/order/`
+      );
+      let data = await response.json();
+      console.log(data);
+      if (data < 1 || user === null) {
+      } else {
+        let badgeSpan = document.querySelector(".badge");
+        badgeSpan.innerHTML = `${data.length}`;
+      }
+    }
+  } catch {}
+};
 
-// oldItems = oldItems ? JSON.parse(oldItems) : {};
-
-// oldItems;
-
-// for (i = 1; i < oldItems.length; i++) {
-//   oldItems[i]["orderId "] = i;
-// }
-
-// console.log(oldItems);
-// let newItem = {
-//   "hotelName": hotelName,
-//   "price": price
-// };
-
-// oldItems.push(newItem);
-
-// localStorage.setItem("order", JSON.stringify(oldItems));
-
-// let orderData = JSON.stringify({
-//   orderId: i
-//   hotelName: hotelName,
-//   price: price,
-// });
-
-// localStorage.setItem(
-//   "order",
-//   JSON.stringify({
-//     hotelName: hotelName,
-//     price: price,
-//     orderId: i,
-//   })
-// );
-// }
-
-// let getLocation = async () => {
-//   let url = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Destination";
-//   try {
-//     let response = await fetch(url);
-//     let data = await response.json();
-//     console.log(data);
-//     data.forEach((element) => {
-//       console.log(element.location);
-//     });
-//   } catch {
-//     console.log("error");
-//   }
-// };
-
-// getLocation();
+badgeOrder();
+// badge order

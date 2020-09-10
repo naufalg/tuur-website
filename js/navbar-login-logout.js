@@ -39,3 +39,27 @@ let btnDisplay = () => {
 };
 
 btnDisplay();
+
+
+// badge order
+let badgeOrder = async () => {
+  try {
+    let user = JSON.parse(localStorage.getItem("user"));
+    if (user == null) {
+    } else {
+      let response = await fetch(
+        `https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users/${user.id}/order/`
+      );
+      let data = await response.json();
+      console.log(data);
+      if (data < 1 || user === null) {
+      } else {
+        let badgeSpan = document.querySelector(".badge");
+        badgeSpan.innerHTML = `${data.length}`;
+      }
+    }
+  } catch {}
+};
+
+badgeOrder();
+// badge order
