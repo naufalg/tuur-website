@@ -56,7 +56,7 @@ let displayData = async () => {
       let displayData1 = document.querySelector(".display-data1");
       // div col
       let div1 = document.createElement("div");
-      div1.className = "col-md-4 shadow";
+      div1.className = "col-md-4 shadow ";
       // div card
       let divCard1 = document.createElement("div");
       divCard1.className = "card slideanim";
@@ -113,37 +113,66 @@ let searchHotel = async () => {
     // empty data
     let displayData1 = document.querySelector(".display-data1");
     displayData1.innerHTML = "";
+
     // show filter data
-    filterData.forEach((element) => {
-      // console.log(element);
-      // console.log(element.hotel);
-      // console.log(element.price);
+    if (filterData < 1) {
       let displayData1 = document.querySelector(".display-data1");
       displayData1.innerHTML = `
-      <div class="row">
-      <div class="col-md-4 shadow">
-      <img class="card-img-top" src="../../assets/images/hotel-bedroom.jpg">
-      <div class="card-body">
-      <h5 class="card-title">${element.hotel}</h5>
-      <p class="card-text">$ ${element.price}/night</p>
-      <button class="btn btn-success shadow-sm search-button">Book</button>
+      <div class="container-fluid">
       <br>
+      <div class="row">
+      <div class="col-12 text-center justify-content-center">
+      <p class="heading-3 text-center">Whoopsie! nothing found ¯\\_(ツ)_/¯</p>
       </div>
       </div>
+      <br>
       </div>
       <div class="row col-12 justify-content-center text-center">
       <button class="btn btn-info text-center disp-all">Show all</button>
       </div>
       `;
-      let button1 = document.querySelector(".search-button");
-      button1.addEventListener("click", function () {
-        funcBook(element.hotel, element.price);
-      });
-      let dispAllBtn = document.querySelector(".disp-all")
+      let dispAllBtn = document.querySelector(".disp-all");
       dispAllBtn.addEventListener("click", function () {
-        location.reload()
-      })
-    });
+        location.reload();
+      });
+    } else {
+      // console.log("filterdata",filterData);
+      filterData.forEach((element) => {
+        // console.log(element);
+        // console.log(element.hotel);
+        // console.log(element.price);
+        let displayData1 = document.querySelector(".display-data1");
+        displayData1.innerHTML = `
+        <div class="row">
+        <div class="col-md-4 shadow">
+        <img class="card-img-top" src="../../assets/images/hotel-bedroom.jpg">
+        <div class="card-body">
+        <h5 class="card-title">${element.hotel}</h5>
+        <p class="card-text">$ ${element.price}/night</p>
+        <button class="btn btn-success shadow-sm search-button">Book</button>
+        <br>
+        </div>
+        </div>
+        </div>
+        <div class="row col-12 justify-content-center text-center">
+        <br></br>
+        <button class="btn btn-info text-center disp-all mt-4">Show all</button>
+        </div>
+        `;
+        let button1 = document.querySelector(".search-button");
+        button1.addEventListener("click", function () {
+          funcBook(element.hotel, element.price);
+        });
+        let dispAllBtn = document.querySelector(".disp-all");
+        dispAllBtn.addEventListener("click", function () {
+          location.reload();
+        });
+      });
+
+
+
+
+    }
     // let filterSearch
   } catch {}
 };

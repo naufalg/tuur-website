@@ -22,7 +22,7 @@ async function login() {
       if (user[0].password === password) {
         Swal.fire({
           position: "center",
-          icon: "error",
+          icon: "success",
           title: "Anda Berhasil login",
           showConfirmButton: true,
         });
