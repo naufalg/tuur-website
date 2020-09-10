@@ -151,6 +151,22 @@ section {
   height: 85vh;
 }
 
+.jumbotron-inner {
+  opacity: 0;
+}
+
+.jumbotron:hover {
+  .overlay {
+    opacity: 0.6;
+    transition: 0.5s;
+  }
+
+  .jumbotron-inner {
+    opacity: 1;
+    transition: 0.5s;
+  }
+}
+
 .bg-cover {
   background-image: url("../../assets/images/product-jumbotron.jpg");
   background-size: cover;
@@ -162,7 +178,7 @@ section {
 
 .overlay {
   background-color: #000;
-  opacity: 0.6;
+  opacity: 0.2;
   position: absolute;
   top: 0;
   left: 0;
@@ -176,6 +192,15 @@ section {
 }
 
 // search
+// #search-input:hover {
+// text-shadow: #746d6d;
+// }
+
+// .search-btn button:hover {
+//   transform: scale(1.01);
+//   transition: 0.5s;
+// }
+
 .search-bar input,
 .search-btn,
 .search-btn:before,
