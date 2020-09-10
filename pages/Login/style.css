@@ -164,14 +164,6 @@ body {
   overflow: hidden;
 }
 
-/* body {
-  padding: 0;
-  margin: 0;
-  background: #fff700;
-  font-size: 14px;
-  line-height: 1;
-} */
-
 label {
   cursor: pointer;
 }
