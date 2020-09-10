@@ -1,11 +1,11 @@
-// jshint esversion:10
-// --------------- elements ----------------
+// ! jshint esversion:10
+// !--------------- elements ----------------
 let button = document.getElementById("button");
 
-// --------------- fetch ----------------
+// !--------------- fetch ----------------
 let endpoint = `https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/Users`;
 
-// --------------- Functions ----------------
+// !--------------- Functions ----------------
 async function login() {
   try {
     let email = document.getElementById("email").value;
@@ -14,11 +14,11 @@ async function login() {
     let response = await fetch(endpoint);
     let results = await response.json();
 
-    // check email dari user data dan value email
+    // !check email dari user data dan value email
     let user = results.filter((result) => result.email === email);
     if (user.length > 0) {
-      //email terdaftar
-      // check password dari user data dan value password
+      // !email terdaftar
+      // !check password dari user data dan value password
       if (user[0].password === password) {
         Swal.fire({
           position: "center",
@@ -26,9 +26,9 @@ async function login() {
           title: "Anda Berhasil login",
           showConfirmButton: true,
         });
-        // simpan data ke localStorage
+        // !simpan data ke localStorage
         localStorage.setItem("user", JSON.stringify(user[0]));
-        // redirect ke home
+        // !redirect ke home
         window.location.href = "../../index.html";
       } else {
         Swal.fire({
@@ -46,7 +46,7 @@ async function login() {
         showConfirmButton: true,
       });
     } else {
-      // ketika email tidak ketemu by filter method
+      // !ketika email tidak ketemu by filter method
       Swal.fire({
         position: "center",
         icon: "warning",
@@ -58,7 +58,7 @@ async function login() {
     console.error(error);
   }
 }
-// --------------- event listener ----------------
+// !--------------- event listener ----------------
 button.addEventListener("click", function () {
   login();
 });
