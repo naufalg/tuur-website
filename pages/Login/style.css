@@ -564,5 +564,21 @@ input {
   .light {
     border-bottom: 0px solid rgb(44 255 255 / 24%);
   }
+
+  .in-cover .bulb {
+    width: 0px;
+    height: 0px;
+    background-color: #08fffa;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px auto;
+    -webkit-box-shadow: 0 0 0px 0px rgba(0, 255, 255, 0.8),
+      0 0 0px 0px rgba(0, 255, 255, 0.5), 0px 0 0px 0px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 0px 0px rgb(127 255 255 / 80%),
+      0 0 0px 0px rgba(0, 255, 255, 0.5), 0px 0 0px 0px rgba(0, 255, 255, 0.2);
+  }
 }
 /*# sourceMappingURL=style.css.map */
