@@ -23,7 +23,7 @@ async function login() {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "Anda Berhasil login",
+          title: "You are successfully login",
           showConfirmButton: true,
         });
         // !simpan data ke localStorage
@@ -34,7 +34,7 @@ async function login() {
         Swal.fire({
           position: "center",
           icon: "error",
-          title: "Email atau password yang anda masukkan salah!",
+          title: "Your email or password is wrong!",
           showConfirmButton: true,
         });
       }
@@ -42,7 +42,7 @@ async function login() {
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "Silahkan isi email dan password anda!",
+        title: "Please fill in your email and password!",
         showConfirmButton: true,
       });
     } else {
@@ -50,7 +50,7 @@ async function login() {
       Swal.fire({
         position: "center",
         icon: "warning",
-        title: "Mohon maaf email anda tidak terdaftar",
+        title: "Sorry your email is not registered!",
         showConfirmButton: true,
       });
     }
