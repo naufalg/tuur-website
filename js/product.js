@@ -45,7 +45,14 @@ btnDisplay();
 let displayData = async () => {
   try {
     let url1 = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/hotel";
-    let img1Src = ["../../assets/images/hotel-bedroom.jpg", "../../assets/images/hotel-2.jpg", "../../assets/images/hotel-3.jpg", "../../assets/images/hotel-2.jpg", "../../assets/images/hotel-3.jpg", "../../assets/images/hotel-bedroom.jpg",];
+    let img1Src = [
+      "../../assets/images/hotel-bedroom.jpg",
+      "../../assets/images/hotel-2.jpg",
+      "../../assets/images/hotel-3.jpg",
+      "../../assets/images/hotel-2.jpg",
+      "../../assets/images/hotel-3.jpg",
+      "../../assets/images/hotel-bedroom.jpg",
+    ];
     // let img2Src = "../../assets/images/hotel-2.jpg";
     // let img3Src = "../../assets/images/hotel-3.jpg";
     let response1 = await fetch(url1);
@@ -214,6 +221,7 @@ let funcBook = async (hotelName, price) => {
         icon: "success",
         button: "Proceed",
       });
+      badgeOrder();
     }
   } catch {
     console.log("error");
