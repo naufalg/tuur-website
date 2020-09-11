@@ -73,6 +73,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* main */
 main {
   margin-top: 11vh;
+  min-height: 72vh;
 }
 
 /* id */
