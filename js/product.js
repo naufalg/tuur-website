@@ -45,11 +45,20 @@ btnDisplay();
 let displayData = async () => {
   try {
     let url1 = "https://5f52d4f27c47c30016e30a68.mockapi.io/tuur/hotel";
-    let img1Src = "../../assets/images/hotel-bedroom.jpg";
+    let img1Src = [
+      "../../assets/images/hotel-bedroom.jpg",
+      "../../assets/images/hotel-2.jpg",
+      "../../assets/images/hotel-3.jpg",
+      "../../assets/images/hotel-2.jpg",
+      "../../assets/images/hotel-3.jpg",
+      "../../assets/images/hotel-bedroom.jpg",
+    ];
+    // let img2Src = "../../assets/images/hotel-2.jpg";
+    // let img3Src = "../../assets/images/hotel-3.jpg";
     let response1 = await fetch(url1);
     let data1 = await response1.json();
     // console.log(data1);
-    data1.forEach((element) => {
+    data1.forEach((element, index) => {
       // console.log(element);
       // console.log(element.hotel);
       // console.log(element.price);
@@ -63,7 +72,7 @@ let displayData = async () => {
       // img
       let img1 = document.createElement("img");
       img1.className = "card-img-top";
-      img1.setAttribute("src", `${img1Src}`);
+      img1.setAttribute("src", `${img1Src[index]}`);
       // div card body
       let card1Body = document.createElement("div");
       card1Body.className = "card-body";
@@ -212,6 +221,7 @@ let funcBook = async (hotelName, price) => {
         icon: "success",
         button: "Proceed",
       });
+      badgeOrder();
     }
   } catch {
     console.log("error");
