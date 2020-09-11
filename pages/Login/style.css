@@ -538,15 +538,22 @@ input {
   }
 }
 
+@media (max-width: 768px) {
+  .bagian-gambar {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
   .container {
-    margin-top: 80px;
+    margin-top: 100px;
     padding: 50px;
   }
   img.center {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+    margin-top: 4vh;
   }
   .bagian-tulisan {
     color: #fcfcfc;

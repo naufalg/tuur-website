@@ -539,6 +539,12 @@ input {
 /* small screen */
 /* tablet */
 /* phone */
+@media (max-width: 768px) {
+  .bagian-gambar {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
   .container {
     margin-top: 20px;
