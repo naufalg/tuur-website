@@ -86,11 +86,11 @@ let checkoutData = async () => {
           //   create order title
           let orderTitle = document.createElement("h6");
           orderTitle.className = "my-0";
-          orderTitle.innerHTML = `$ ${element.hotel}`;
+          orderTitle.innerHTML = `${element.hotel}`;
           //   create span price
           let spanPrice = document.createElement("span");
           spanPrice.className = "text-muted";
-          spanPrice.innerHTML = `${element.price}`;
+          spanPrice.innerHTML = `$ ${element.price}`;
           //   appendchild
           checkotUl.appendChild(checkoutList);
           checkoutList.appendChild(divList);
