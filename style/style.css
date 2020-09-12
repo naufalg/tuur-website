@@ -215,6 +215,12 @@ a:hover {
   .carousel-caption {
     font-size: 0.2em;
   }
+  .border-R {
+    border: none;
+  }
+  .border-L {
+    border: none;
+  }
 }
 
 /* tablet */
@@ -236,12 +242,6 @@ a:hover {
   }
   .marketing > div {
     margin: 2vh 0 0 0;
-  }
-  .border-R {
-    border: none;
-  }
-  .border-L {
-    border: none;
   }
 }
 
