@@ -247,6 +247,14 @@ body {
   .carousel-caption {
     font-size: 0.2em;
   }
+
+  .border-R {
+    border: none;
+  }
+
+  .border-L {
+    border: none;
+  }
 }
 
 /* tablet */
@@ -280,13 +288,7 @@ body {
     // padding: 5vh;
   }
 
-  .border-R {
-    border: none;
-  }
-
-  .border-L {
-    border: none;
-  }
+  
 }
 
 /* phone */
